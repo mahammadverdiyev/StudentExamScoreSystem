@@ -5,6 +5,7 @@ namespace StudentExamScoreSystem
 	public class InputValidator
 	{
 		StudentExamScoreSystem system;
+
 		public InputValidator(StudentExamScoreSystem system)
 		{
 			this.system = system;
@@ -31,29 +32,29 @@ namespace StudentExamScoreSystem
 
 		public bool NameInputIsValid()
 		{
-			if (NameIsValid())
+			if (NameIsCorrect())
 			{
-				system.NameValidateLabel.Text = "You should enter your name";
+				system.NameValidatorLabel.Text = "You should enter your name";
 				return false;
 			}
 
 			return true;
 		}
 
-		private bool NameIsValid() => system.NameTextbox.Text.Trim().Length == 0 || system.NameTextbox.Text.Any(char.IsDigit);
+		private bool NameIsCorrect() => system.NameTextbox.Text.Trim().Length == 0 || system.NameTextbox.Text.Any(char.IsDigit);
 
 		public bool SurnameInputIsValid()
 		{
-			if (SurnameIsValid())
+			if (SurnameIsCorrect())
 			{
-				system.SurnameValidateLabel.Text = "You should enter your surname";
+				system.SurnameValidatorLabel.Text = "You should enter your surname";
 				return false;
 			}
 
 			return true;
 		}
 
-		private bool SurnameIsValid() => system.SurnameTextbox.Text.Trim().Length == 0 || system.SurnameTextbox.Text.Any(char.IsDigit);
+		private bool SurnameIsCorrect() => system.SurnameTextbox.Text.Trim().Length == 0 || system.SurnameTextbox.Text.Any(char.IsDigit);
 
 		public bool IsCourseValid()
 		{
