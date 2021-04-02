@@ -29,92 +29,92 @@ namespace StudentExamScoreSystem
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.txtbox_console = new System.Windows.Forms.TextBox();
+			this.consoleTextBox = new System.Windows.Forms.TextBox();
 			this.ShowAllButton = new System.Windows.Forms.Button();
 			this.panel_console = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
-			this.comboBox_sort = new System.Windows.Forms.ComboBox();
-			this.checkBox_reversed = new System.Windows.Forms.CheckBox();
-			this.panel_find_student = new System.Windows.Forms.Panel();
+			this.sortStudentsComboBox = new System.Windows.Forms.ComboBox();
+			this.reversedCheckBox = new System.Windows.Forms.CheckBox();
+			this.findStudentPanel = new System.Windows.Forms.Panel();
 			this.txtbox_find_average = new System.Windows.Forms.TextBox();
-			this.comboBox_find_average = new System.Windows.Forms.ComboBox();
+			this.findAverageComboBox = new System.Windows.Forms.ComboBox();
 			this.label_find_average = new System.Windows.Forms.Label();
 			this.txtbox_find_final = new System.Windows.Forms.TextBox();
-			this.comboBox_find_final = new System.Windows.Forms.ComboBox();
+			this.findFinalComboBox = new System.Windows.Forms.ComboBox();
 			this.label_find_final = new System.Windows.Forms.Label();
 			this.label_find_sdf3 = new System.Windows.Forms.Label();
-			this.comboBox_find_sdf3 = new System.Windows.Forms.ComboBox();
+			this.findSdf3ComboBox = new System.Windows.Forms.ComboBox();
 			this.txtbox_find_sdf3 = new System.Windows.Forms.TextBox();
 			this.label_find_sdf2 = new System.Windows.Forms.Label();
-			this.comboBox_find_sdf2 = new System.Windows.Forms.ComboBox();
+			this.findSdf2ComboBox = new System.Windows.Forms.ComboBox();
 			this.txtbox_find_sdf2 = new System.Windows.Forms.TextBox();
 			this.txtbox_find_sdf1 = new System.Windows.Forms.TextBox();
-			this.comboBox_find_sdf1 = new System.Windows.Forms.ComboBox();
+			this.findSdf1ComboBox = new System.Windows.Forms.ComboBox();
 			this.label_find_sdf1 = new System.Windows.Forms.Label();
 			this.FindStudentButton = new System.Windows.Forms.Button();
-			this.comboBox_find_course = new System.Windows.Forms.ComboBox();
-			this.label_find_course = new System.Windows.Forms.Label();
-			this.label_find_surname = new System.Windows.Forms.Label();
-			this.txtbox_find_surname = new System.Windows.Forms.TextBox();
-			this.label_find_name = new System.Windows.Forms.Label();
-			this.txtbox_find_name = new System.Windows.Forms.TextBox();
+			this.findCourseComboBox = new System.Windows.Forms.ComboBox();
+			this.findCourseLabel = new System.Windows.Forms.Label();
+			this.findSurnameLabel = new System.Windows.Forms.Label();
+			this.findSurnameTextBox = new System.Windows.Forms.TextBox();
+			this.findNameLabel = new System.Windows.Forms.Label();
+			this.findNameTextBox = new System.Windows.Forms.TextBox();
 			this.label_find_student = new System.Windows.Forms.Label();
-			this.panel1 = new System.Windows.Forms.Panel();
+			this.sortPanel = new System.Windows.Forms.Panel();
 			this.button_whoisare = new System.Windows.Forms.Button();
 			this.comboBox_whoisare = new System.Windows.Forms.ComboBox();
 			this.label_whoisare = new System.Windows.Forms.Label();
 			this.SortButton = new System.Windows.Forms.Button();
-			this.label_add_student = new System.Windows.Forms.Label();
-			this.label_name = new System.Windows.Forms.Label();
-			this.label_surname = new System.Windows.Forms.Label();
-			this.txtbox_name = new System.Windows.Forms.TextBox();
-			this.txtbox_surname = new System.Windows.Forms.TextBox();
-			this.label_course = new System.Windows.Forms.Label();
-			this.label_sdf1 = new System.Windows.Forms.Label();
-			this.label_sdf2 = new System.Windows.Forms.Label();
-			this.label_sdf3 = new System.Windows.Forms.Label();
+			this.addStudentLabel = new System.Windows.Forms.Label();
+			this.nameLabel = new System.Windows.Forms.Label();
+			this.surnameLabel = new System.Windows.Forms.Label();
+			this.nameTextBox = new System.Windows.Forms.TextBox();
+			this.surnameTextBox = new System.Windows.Forms.TextBox();
+			this.courseLabel = new System.Windows.Forms.Label();
+			this.sdf1Label = new System.Windows.Forms.Label();
+			this.sdf2Label = new System.Windows.Forms.Label();
+			this.sdf3Label = new System.Windows.Forms.Label();
 			this.AddStudentButton = new System.Windows.Forms.Button();
-			this.label_final = new System.Windows.Forms.Label();
+			this.finalLabel = new System.Windows.Forms.Label();
 			this.label_header = new System.Windows.Forms.Label();
-			this.label_validate_name = new System.Windows.Forms.Label();
+			this.nameValidatorLabel = new System.Windows.Forms.Label();
 			this.label_validate_sdf1 = new System.Windows.Forms.Label();
 			this.label_validate_sdf2 = new System.Windows.Forms.Label();
 			this.label_validate_sdf3 = new System.Windows.Forms.Label();
 			this.label_validate_final = new System.Windows.Forms.Label();
-			this.label_validate_surname = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.label_validate_course = new System.Windows.Forms.Label();
+			this.surnameValidatorLabel = new System.Windows.Forms.Label();
+			this.logo = new System.Windows.Forms.PictureBox();
+			this.courseValidatorLabel = new System.Windows.Forms.Label();
 			this.label_validate_does_exist = new System.Windows.Forms.Label();
-			this.comboBox_course = new System.Windows.Forms.ComboBox();
-			this.panel_left = new System.Windows.Forms.Panel();
-			this.numericUpDown_Sdf1 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown_Sdf2 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown_Sdf3 = new System.Windows.Forms.NumericUpDown();
-			this.numericUpDown_Final = new System.Windows.Forms.NumericUpDown();
+			this.courseComboBox = new System.Windows.Forms.ComboBox();
+			this.leftPanel = new System.Windows.Forms.Panel();
+			this.FinalNumericUpDown = new System.Windows.Forms.NumericUpDown();
+			this.sdf3NumericUpDown = new System.Windows.Forms.NumericUpDown();
+			this.sdf2NumericUpDown = new System.Windows.Forms.NumericUpDown();
+			this.sdf1NumericUpDown = new System.Windows.Forms.NumericUpDown();
 			this.panel_console.SuspendLayout();
-			this.panel_find_student.SuspendLayout();
-			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			this.panel_left.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sdf1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sdf2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sdf3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Final)).BeginInit();
+			this.findStudentPanel.SuspendLayout();
+			this.sortPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+			this.leftPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.FinalNumericUpDown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sdf3NumericUpDown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sdf2NumericUpDown)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.sdf1NumericUpDown)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// txtbox_console
+			// consoleTextBox
 			// 
-			this.txtbox_console.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.txtbox_console.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtbox_console.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtbox_console.ForeColor = System.Drawing.Color.White;
-			this.txtbox_console.Location = new System.Drawing.Point(8, 8);
-			this.txtbox_console.Multiline = true;
-			this.txtbox_console.Name = "txtbox_console";
-			this.txtbox_console.ReadOnly = true;
-			this.txtbox_console.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtbox_console.Size = new System.Drawing.Size(831, 221);
-			this.txtbox_console.TabIndex = 2;
+			this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.consoleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.consoleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.consoleTextBox.ForeColor = System.Drawing.Color.White;
+			this.consoleTextBox.Location = new System.Drawing.Point(8, 8);
+			this.consoleTextBox.Multiline = true;
+			this.consoleTextBox.Name = "consoleTextBox";
+			this.consoleTextBox.ReadOnly = true;
+			this.consoleTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.consoleTextBox.Size = new System.Drawing.Size(831, 221);
+			this.consoleTextBox.TabIndex = 2;
 			// 
 			// ShowAllButton
 			// 
@@ -135,7 +135,7 @@ namespace StudentExamScoreSystem
 			// panel_console
 			// 
 			this.panel_console.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.panel_console.Controls.Add(this.txtbox_console);
+			this.panel_console.Controls.Add(this.consoleTextBox);
 			this.panel_console.Location = new System.Drawing.Point(358, 12);
 			this.panel_console.Name = "panel_console";
 			this.panel_console.Padding = new System.Windows.Forms.Padding(5);
@@ -153,14 +153,14 @@ namespace StudentExamScoreSystem
 			this.label1.TabIndex = 5;
 			this.label1.Text = "Sort by";
 			// 
-			// comboBox_sort
+			// sortStudentsComboBox
 			// 
-			this.comboBox_sort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_sort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_sort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_sort.ForeColor = System.Drawing.Color.White;
-			this.comboBox_sort.FormattingEnabled = true;
-			this.comboBox_sort.Items.AddRange(new object[] {
+			this.sortStudentsComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.sortStudentsComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.sortStudentsComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.sortStudentsComboBox.ForeColor = System.Drawing.Color.White;
+			this.sortStudentsComboBox.FormattingEnabled = true;
+			this.sortStudentsComboBox.Items.AddRange(new object[] {
             "COURSE",
             "SDF1",
             "SDF2",
@@ -168,53 +168,53 @@ namespace StudentExamScoreSystem
             "FINAL",
             "AVERAGE",
             "TIME CREATED"});
-			this.comboBox_sort.Location = new System.Drawing.Point(98, 32);
-			this.comboBox_sort.Name = "comboBox_sort";
-			this.comboBox_sort.Size = new System.Drawing.Size(108, 24);
-			this.comboBox_sort.TabIndex = 6;
+			this.sortStudentsComboBox.Location = new System.Drawing.Point(98, 32);
+			this.sortStudentsComboBox.Name = "sortStudentsComboBox";
+			this.sortStudentsComboBox.Size = new System.Drawing.Size(108, 24);
+			this.sortStudentsComboBox.TabIndex = 6;
 			// 
-			// checkBox_reversed
+			// reversedCheckBox
 			// 
-			this.checkBox_reversed.AutoSize = true;
-			this.checkBox_reversed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_reversed.ForeColor = System.Drawing.Color.White;
-			this.checkBox_reversed.Location = new System.Drawing.Point(98, 69);
-			this.checkBox_reversed.Name = "checkBox_reversed";
-			this.checkBox_reversed.Size = new System.Drawing.Size(81, 20);
-			this.checkBox_reversed.TabIndex = 7;
-			this.checkBox_reversed.Text = "reversed";
-			this.checkBox_reversed.UseVisualStyleBackColor = true;
+			this.reversedCheckBox.AutoSize = true;
+			this.reversedCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.reversedCheckBox.ForeColor = System.Drawing.Color.White;
+			this.reversedCheckBox.Location = new System.Drawing.Point(98, 69);
+			this.reversedCheckBox.Name = "reversedCheckBox";
+			this.reversedCheckBox.Size = new System.Drawing.Size(81, 20);
+			this.reversedCheckBox.TabIndex = 7;
+			this.reversedCheckBox.Text = "reversed";
+			this.reversedCheckBox.UseVisualStyleBackColor = true;
 			// 
-			// panel_find_student
+			// findStudentPanel
 			// 
-			this.panel_find_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.panel_find_student.Controls.Add(this.txtbox_find_average);
-			this.panel_find_student.Controls.Add(this.comboBox_find_average);
-			this.panel_find_student.Controls.Add(this.label_find_average);
-			this.panel_find_student.Controls.Add(this.txtbox_find_final);
-			this.panel_find_student.Controls.Add(this.comboBox_find_final);
-			this.panel_find_student.Controls.Add(this.label_find_final);
-			this.panel_find_student.Controls.Add(this.label_find_sdf3);
-			this.panel_find_student.Controls.Add(this.comboBox_find_sdf3);
-			this.panel_find_student.Controls.Add(this.txtbox_find_sdf3);
-			this.panel_find_student.Controls.Add(this.label_find_sdf2);
-			this.panel_find_student.Controls.Add(this.comboBox_find_sdf2);
-			this.panel_find_student.Controls.Add(this.txtbox_find_sdf2);
-			this.panel_find_student.Controls.Add(this.txtbox_find_sdf1);
-			this.panel_find_student.Controls.Add(this.comboBox_find_sdf1);
-			this.panel_find_student.Controls.Add(this.label_find_sdf1);
-			this.panel_find_student.Controls.Add(this.FindStudentButton);
-			this.panel_find_student.Controls.Add(this.comboBox_find_course);
-			this.panel_find_student.Controls.Add(this.label_find_course);
-			this.panel_find_student.Controls.Add(this.label_find_surname);
-			this.panel_find_student.Controls.Add(this.txtbox_find_surname);
-			this.panel_find_student.Controls.Add(this.label_find_name);
-			this.panel_find_student.Controls.Add(this.txtbox_find_name);
-			this.panel_find_student.Controls.Add(this.label_find_student);
-			this.panel_find_student.Location = new System.Drawing.Point(827, 256);
-			this.panel_find_student.Name = "panel_find_student";
-			this.panel_find_student.Size = new System.Drawing.Size(378, 284);
-			this.panel_find_student.TabIndex = 8;
+			this.findStudentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findStudentPanel.Controls.Add(this.txtbox_find_average);
+			this.findStudentPanel.Controls.Add(this.findAverageComboBox);
+			this.findStudentPanel.Controls.Add(this.label_find_average);
+			this.findStudentPanel.Controls.Add(this.txtbox_find_final);
+			this.findStudentPanel.Controls.Add(this.findFinalComboBox);
+			this.findStudentPanel.Controls.Add(this.label_find_final);
+			this.findStudentPanel.Controls.Add(this.label_find_sdf3);
+			this.findStudentPanel.Controls.Add(this.findSdf3ComboBox);
+			this.findStudentPanel.Controls.Add(this.txtbox_find_sdf3);
+			this.findStudentPanel.Controls.Add(this.label_find_sdf2);
+			this.findStudentPanel.Controls.Add(this.findSdf2ComboBox);
+			this.findStudentPanel.Controls.Add(this.txtbox_find_sdf2);
+			this.findStudentPanel.Controls.Add(this.txtbox_find_sdf1);
+			this.findStudentPanel.Controls.Add(this.findSdf1ComboBox);
+			this.findStudentPanel.Controls.Add(this.label_find_sdf1);
+			this.findStudentPanel.Controls.Add(this.FindStudentButton);
+			this.findStudentPanel.Controls.Add(this.findCourseComboBox);
+			this.findStudentPanel.Controls.Add(this.findCourseLabel);
+			this.findStudentPanel.Controls.Add(this.findSurnameLabel);
+			this.findStudentPanel.Controls.Add(this.findSurnameTextBox);
+			this.findStudentPanel.Controls.Add(this.findNameLabel);
+			this.findStudentPanel.Controls.Add(this.findNameTextBox);
+			this.findStudentPanel.Controls.Add(this.label_find_student);
+			this.findStudentPanel.Location = new System.Drawing.Point(827, 256);
+			this.findStudentPanel.Name = "findStudentPanel";
+			this.findStudentPanel.Size = new System.Drawing.Size(378, 284);
+			this.findStudentPanel.TabIndex = 8;
 			// 
 			// txtbox_find_average
 			// 
@@ -226,20 +226,20 @@ namespace StudentExamScoreSystem
 			this.txtbox_find_average.Size = new System.Drawing.Size(29, 20);
 			this.txtbox_find_average.TabIndex = 47;
 			// 
-			// comboBox_find_average
+			// findAverageComboBox
 			// 
-			this.comboBox_find_average.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_find_average.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_find_average.ForeColor = System.Drawing.Color.White;
-			this.comboBox_find_average.FormattingEnabled = true;
-			this.comboBox_find_average.Items.AddRange(new object[] {
+			this.findAverageComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findAverageComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.findAverageComboBox.ForeColor = System.Drawing.Color.White;
+			this.findAverageComboBox.FormattingEnabled = true;
+			this.findAverageComboBox.Items.AddRange(new object[] {
             "<",
             ">",
             "="});
-			this.comboBox_find_average.Location = new System.Drawing.Point(282, 180);
-			this.comboBox_find_average.Name = "comboBox_find_average";
-			this.comboBox_find_average.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_find_average.TabIndex = 46;
+			this.findAverageComboBox.Location = new System.Drawing.Point(282, 180);
+			this.findAverageComboBox.Name = "findAverageComboBox";
+			this.findAverageComboBox.Size = new System.Drawing.Size(42, 21);
+			this.findAverageComboBox.TabIndex = 46;
 			// 
 			// label_find_average
 			// 
@@ -262,20 +262,20 @@ namespace StudentExamScoreSystem
 			this.txtbox_find_final.Size = new System.Drawing.Size(29, 20);
 			this.txtbox_find_final.TabIndex = 44;
 			// 
-			// comboBox_find_final
+			// findFinalComboBox
 			// 
-			this.comboBox_find_final.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_find_final.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_find_final.ForeColor = System.Drawing.Color.White;
-			this.comboBox_find_final.FormattingEnabled = true;
-			this.comboBox_find_final.Items.AddRange(new object[] {
+			this.findFinalComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findFinalComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.findFinalComboBox.ForeColor = System.Drawing.Color.White;
+			this.findFinalComboBox.FormattingEnabled = true;
+			this.findFinalComboBox.Items.AddRange(new object[] {
             "<",
             ">",
             "="});
-			this.comboBox_find_final.Location = new System.Drawing.Point(282, 153);
-			this.comboBox_find_final.Name = "comboBox_find_final";
-			this.comboBox_find_final.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_find_final.TabIndex = 43;
+			this.findFinalComboBox.Location = new System.Drawing.Point(282, 153);
+			this.findFinalComboBox.Name = "findFinalComboBox";
+			this.findFinalComboBox.Size = new System.Drawing.Size(42, 21);
+			this.findFinalComboBox.TabIndex = 43;
 			// 
 			// label_find_final
 			// 
@@ -299,20 +299,20 @@ namespace StudentExamScoreSystem
 			this.label_find_sdf3.TabIndex = 41;
 			this.label_find_sdf3.Text = "SDF3";
 			// 
-			// comboBox_find_sdf3
+			// findSdf3ComboBox
 			// 
-			this.comboBox_find_sdf3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_find_sdf3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_find_sdf3.ForeColor = System.Drawing.Color.White;
-			this.comboBox_find_sdf3.FormattingEnabled = true;
-			this.comboBox_find_sdf3.Items.AddRange(new object[] {
+			this.findSdf3ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findSdf3ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.findSdf3ComboBox.ForeColor = System.Drawing.Color.White;
+			this.findSdf3ComboBox.FormattingEnabled = true;
+			this.findSdf3ComboBox.Items.AddRange(new object[] {
             "<",
             ">",
             "="});
-			this.comboBox_find_sdf3.Location = new System.Drawing.Point(75, 207);
-			this.comboBox_find_sdf3.Name = "comboBox_find_sdf3";
-			this.comboBox_find_sdf3.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_find_sdf3.TabIndex = 40;
+			this.findSdf3ComboBox.Location = new System.Drawing.Point(75, 207);
+			this.findSdf3ComboBox.Name = "findSdf3ComboBox";
+			this.findSdf3ComboBox.Size = new System.Drawing.Size(42, 21);
+			this.findSdf3ComboBox.TabIndex = 40;
 			// 
 			// txtbox_find_sdf3
 			// 
@@ -335,20 +335,20 @@ namespace StudentExamScoreSystem
 			this.label_find_sdf2.TabIndex = 38;
 			this.label_find_sdf2.Text = "SDF2";
 			// 
-			// comboBox_find_sdf2
+			// findSdf2ComboBox
 			// 
-			this.comboBox_find_sdf2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_find_sdf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_find_sdf2.ForeColor = System.Drawing.Color.White;
-			this.comboBox_find_sdf2.FormattingEnabled = true;
-			this.comboBox_find_sdf2.Items.AddRange(new object[] {
+			this.findSdf2ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findSdf2ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.findSdf2ComboBox.ForeColor = System.Drawing.Color.White;
+			this.findSdf2ComboBox.FormattingEnabled = true;
+			this.findSdf2ComboBox.Items.AddRange(new object[] {
             "<",
             ">",
             "="});
-			this.comboBox_find_sdf2.Location = new System.Drawing.Point(75, 179);
-			this.comboBox_find_sdf2.Name = "comboBox_find_sdf2";
-			this.comboBox_find_sdf2.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_find_sdf2.TabIndex = 37;
+			this.findSdf2ComboBox.Location = new System.Drawing.Point(75, 179);
+			this.findSdf2ComboBox.Name = "findSdf2ComboBox";
+			this.findSdf2ComboBox.Size = new System.Drawing.Size(42, 21);
+			this.findSdf2ComboBox.TabIndex = 37;
 			// 
 			// txtbox_find_sdf2
 			// 
@@ -370,20 +370,20 @@ namespace StudentExamScoreSystem
 			this.txtbox_find_sdf1.Size = new System.Drawing.Size(29, 20);
 			this.txtbox_find_sdf1.TabIndex = 35;
 			// 
-			// comboBox_find_sdf1
+			// findSdf1ComboBox
 			// 
-			this.comboBox_find_sdf1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_find_sdf1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_find_sdf1.ForeColor = System.Drawing.Color.White;
-			this.comboBox_find_sdf1.FormattingEnabled = true;
-			this.comboBox_find_sdf1.Items.AddRange(new object[] {
+			this.findSdf1ComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findSdf1ComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.findSdf1ComboBox.ForeColor = System.Drawing.Color.White;
+			this.findSdf1ComboBox.FormattingEnabled = true;
+			this.findSdf1ComboBox.Items.AddRange(new object[] {
             "<",
             ">",
             "="});
-			this.comboBox_find_sdf1.Location = new System.Drawing.Point(75, 152);
-			this.comboBox_find_sdf1.Name = "comboBox_find_sdf1";
-			this.comboBox_find_sdf1.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_find_sdf1.TabIndex = 34;
+			this.findSdf1ComboBox.Location = new System.Drawing.Point(75, 152);
+			this.findSdf1ComboBox.Name = "findSdf1ComboBox";
+			this.findSdf1ComboBox.Size = new System.Drawing.Size(42, 21);
+			this.findSdf1ComboBox.TabIndex = 34;
 			// 
 			// label_find_sdf1
 			// 
@@ -412,74 +412,74 @@ namespace StudentExamScoreSystem
 			this.FindStudentButton.UseVisualStyleBackColor = false;
 			this.FindStudentButton.Click += new System.EventHandler(this.FindStudentButton_Click);
 			// 
-			// comboBox_find_course
+			// findCourseComboBox
 			// 
-			this.comboBox_find_course.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_find_course.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_find_course.ForeColor = System.Drawing.Color.White;
-			this.comboBox_find_course.FormattingEnabled = true;
-			this.comboBox_find_course.Items.AddRange(new object[] {
+			this.findCourseComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.findCourseComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.findCourseComboBox.ForeColor = System.Drawing.Color.White;
+			this.findCourseComboBox.FormattingEnabled = true;
+			this.findCourseComboBox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-			this.comboBox_find_course.Location = new System.Drawing.Point(123, 105);
-			this.comboBox_find_course.Name = "comboBox_find_course";
-			this.comboBox_find_course.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_find_course.TabIndex = 32;
+			this.findCourseComboBox.Location = new System.Drawing.Point(123, 105);
+			this.findCourseComboBox.Name = "findCourseComboBox";
+			this.findCourseComboBox.Size = new System.Drawing.Size(42, 21);
+			this.findCourseComboBox.TabIndex = 32;
 			// 
-			// label_find_course
+			// findCourseLabel
 			// 
-			this.label_find_course.AutoSize = true;
-			this.label_find_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_find_course.ForeColor = System.Drawing.Color.White;
-			this.label_find_course.Location = new System.Drawing.Point(18, 103);
-			this.label_find_course.Name = "label_find_course";
-			this.label_find_course.Size = new System.Drawing.Size(60, 20);
-			this.label_find_course.TabIndex = 6;
-			this.label_find_course.Text = "Course";
+			this.findCourseLabel.AutoSize = true;
+			this.findCourseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findCourseLabel.ForeColor = System.Drawing.Color.White;
+			this.findCourseLabel.Location = new System.Drawing.Point(18, 103);
+			this.findCourseLabel.Name = "findCourseLabel";
+			this.findCourseLabel.Size = new System.Drawing.Size(60, 20);
+			this.findCourseLabel.TabIndex = 6;
+			this.findCourseLabel.Text = "Course";
 			// 
-			// label_find_surname
+			// findSurnameLabel
 			// 
-			this.label_find_surname.AutoSize = true;
-			this.label_find_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_find_surname.ForeColor = System.Drawing.Color.White;
-			this.label_find_surname.Location = new System.Drawing.Point(18, 71);
-			this.label_find_surname.Name = "label_find_surname";
-			this.label_find_surname.Size = new System.Drawing.Size(74, 20);
-			this.label_find_surname.TabIndex = 4;
-			this.label_find_surname.Text = "Surname";
+			this.findSurnameLabel.AutoSize = true;
+			this.findSurnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findSurnameLabel.ForeColor = System.Drawing.Color.White;
+			this.findSurnameLabel.Location = new System.Drawing.Point(18, 71);
+			this.findSurnameLabel.Name = "findSurnameLabel";
+			this.findSurnameLabel.Size = new System.Drawing.Size(74, 20);
+			this.findSurnameLabel.TabIndex = 4;
+			this.findSurnameLabel.Text = "Surname";
 			// 
-			// txtbox_find_surname
+			// findSurnameTextBox
 			// 
-			this.txtbox_find_surname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
-			this.txtbox_find_surname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtbox_find_surname.ForeColor = System.Drawing.Color.White;
-			this.txtbox_find_surname.Location = new System.Drawing.Point(123, 71);
-			this.txtbox_find_surname.Name = "txtbox_find_surname";
-			this.txtbox_find_surname.Size = new System.Drawing.Size(124, 20);
-			this.txtbox_find_surname.TabIndex = 3;
+			this.findSurnameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
+			this.findSurnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.findSurnameTextBox.ForeColor = System.Drawing.Color.White;
+			this.findSurnameTextBox.Location = new System.Drawing.Point(123, 71);
+			this.findSurnameTextBox.Name = "findSurnameTextBox";
+			this.findSurnameTextBox.Size = new System.Drawing.Size(124, 20);
+			this.findSurnameTextBox.TabIndex = 3;
 			// 
-			// label_find_name
+			// findNameLabel
 			// 
-			this.label_find_name.AutoSize = true;
-			this.label_find_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_find_name.ForeColor = System.Drawing.Color.White;
-			this.label_find_name.Location = new System.Drawing.Point(18, 37);
-			this.label_find_name.Name = "label_find_name";
-			this.label_find_name.Size = new System.Drawing.Size(51, 20);
-			this.label_find_name.TabIndex = 2;
-			this.label_find_name.Text = "Name";
+			this.findNameLabel.AutoSize = true;
+			this.findNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findNameLabel.ForeColor = System.Drawing.Color.White;
+			this.findNameLabel.Location = new System.Drawing.Point(18, 37);
+			this.findNameLabel.Name = "findNameLabel";
+			this.findNameLabel.Size = new System.Drawing.Size(51, 20);
+			this.findNameLabel.TabIndex = 2;
+			this.findNameLabel.Text = "Name";
 			// 
-			// txtbox_find_name
+			// findNameTextBox
 			// 
-			this.txtbox_find_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
-			this.txtbox_find_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtbox_find_name.ForeColor = System.Drawing.Color.White;
-			this.txtbox_find_name.Location = new System.Drawing.Point(123, 37);
-			this.txtbox_find_name.Name = "txtbox_find_name";
-			this.txtbox_find_name.Size = new System.Drawing.Size(124, 20);
-			this.txtbox_find_name.TabIndex = 1;
+			this.findNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
+			this.findNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.findNameTextBox.ForeColor = System.Drawing.Color.White;
+			this.findNameTextBox.Location = new System.Drawing.Point(123, 37);
+			this.findNameTextBox.Name = "findNameTextBox";
+			this.findNameTextBox.Size = new System.Drawing.Size(124, 20);
+			this.findNameTextBox.TabIndex = 1;
 			// 
 			// label_find_student
 			// 
@@ -492,21 +492,21 @@ namespace StudentExamScoreSystem
 			this.label_find_student.TabIndex = 0;
 			this.label_find_student.Text = "Find Student";
 			// 
-			// panel1
+			// sortPanel
 			// 
-			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.panel1.Controls.Add(this.button_whoisare);
-			this.panel1.Controls.Add(this.comboBox_whoisare);
-			this.panel1.Controls.Add(this.label_whoisare);
-			this.panel1.Controls.Add(this.SortButton);
-			this.panel1.Controls.Add(this.checkBox_reversed);
-			this.panel1.Controls.Add(this.label1);
-			this.panel1.Controls.Add(this.comboBox_sort);
-			this.panel1.Controls.Add(this.ShowAllButton);
-			this.panel1.Location = new System.Drawing.Point(358, 256);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(463, 284);
-			this.panel1.TabIndex = 9;
+			this.sortPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.sortPanel.Controls.Add(this.button_whoisare);
+			this.sortPanel.Controls.Add(this.comboBox_whoisare);
+			this.sortPanel.Controls.Add(this.label_whoisare);
+			this.sortPanel.Controls.Add(this.SortButton);
+			this.sortPanel.Controls.Add(this.reversedCheckBox);
+			this.sortPanel.Controls.Add(this.label1);
+			this.sortPanel.Controls.Add(this.sortStudentsComboBox);
+			this.sortPanel.Controls.Add(this.ShowAllButton);
+			this.sortPanel.Location = new System.Drawing.Point(358, 256);
+			this.sortPanel.Name = "sortPanel";
+			this.sortPanel.Size = new System.Drawing.Size(463, 284);
+			this.sortPanel.TabIndex = 9;
 			// 
 			// button_whoisare
 			// 
@@ -565,104 +565,104 @@ namespace StudentExamScoreSystem
 			this.SortButton.UseVisualStyleBackColor = false;
 			this.SortButton.Click += new System.EventHandler(this.SortButton_Click);
 			// 
-			// label_add_student
+			// addStudentLabel
 			// 
-			this.label_add_student.AutoSize = true;
-			this.label_add_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_add_student.ForeColor = System.Drawing.Color.GhostWhite;
-			this.label_add_student.Location = new System.Drawing.Point(114, 53);
-			this.label_add_student.Name = "label_add_student";
-			this.label_add_student.Size = new System.Drawing.Size(145, 24);
-			this.label_add_student.TabIndex = 0;
-			this.label_add_student.Text = "Student addition";
+			this.addStudentLabel.AutoSize = true;
+			this.addStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.addStudentLabel.ForeColor = System.Drawing.Color.GhostWhite;
+			this.addStudentLabel.Location = new System.Drawing.Point(93, 50);
+			this.addStudentLabel.Name = "addStudentLabel";
+			this.addStudentLabel.Size = new System.Drawing.Size(145, 24);
+			this.addStudentLabel.TabIndex = 0;
+			this.addStudentLabel.Text = "Student addition";
 			// 
-			// label_name
+			// nameLabel
 			// 
-			this.label_name.AutoSize = true;
-			this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_name.ForeColor = System.Drawing.Color.White;
-			this.label_name.Location = new System.Drawing.Point(27, 111);
-			this.label_name.Name = "label_name";
-			this.label_name.Size = new System.Drawing.Size(55, 20);
-			this.label_name.TabIndex = 1;
-			this.label_name.Text = "Name:";
+			this.nameLabel.AutoSize = true;
+			this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nameLabel.ForeColor = System.Drawing.Color.White;
+			this.nameLabel.Location = new System.Drawing.Point(27, 111);
+			this.nameLabel.Name = "nameLabel";
+			this.nameLabel.Size = new System.Drawing.Size(55, 20);
+			this.nameLabel.TabIndex = 1;
+			this.nameLabel.Text = "Name:";
 			// 
-			// label_surname
+			// surnameLabel
 			// 
-			this.label_surname.AutoSize = true;
-			this.label_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_surname.ForeColor = System.Drawing.Color.White;
-			this.label_surname.Location = new System.Drawing.Point(23, 160);
-			this.label_surname.Name = "label_surname";
-			this.label_surname.Size = new System.Drawing.Size(78, 20);
-			this.label_surname.TabIndex = 2;
-			this.label_surname.Text = "Surname:";
+			this.surnameLabel.AutoSize = true;
+			this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.surnameLabel.ForeColor = System.Drawing.Color.White;
+			this.surnameLabel.Location = new System.Drawing.Point(23, 160);
+			this.surnameLabel.Name = "surnameLabel";
+			this.surnameLabel.Size = new System.Drawing.Size(78, 20);
+			this.surnameLabel.TabIndex = 2;
+			this.surnameLabel.Text = "Surname:";
 			// 
-			// txtbox_name
+			// nameTextBox
 			// 
-			this.txtbox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
-			this.txtbox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtbox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtbox_name.ForeColor = System.Drawing.Color.White;
-			this.txtbox_name.Location = new System.Drawing.Point(143, 105);
-			this.txtbox_name.Name = "txtbox_name";
-			this.txtbox_name.Size = new System.Drawing.Size(173, 26);
-			this.txtbox_name.TabIndex = 3;
+			this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
+			this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nameTextBox.ForeColor = System.Drawing.Color.White;
+			this.nameTextBox.Location = new System.Drawing.Point(143, 105);
+			this.nameTextBox.Name = "nameTextBox";
+			this.nameTextBox.Size = new System.Drawing.Size(173, 26);
+			this.nameTextBox.TabIndex = 3;
 			// 
-			// txtbox_surname
+			// surnameTextBox
 			// 
-			this.txtbox_surname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
-			this.txtbox_surname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtbox_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtbox_surname.ForeColor = System.Drawing.Color.White;
-			this.txtbox_surname.Location = new System.Drawing.Point(143, 154);
-			this.txtbox_surname.Name = "txtbox_surname";
-			this.txtbox_surname.Size = new System.Drawing.Size(173, 26);
-			this.txtbox_surname.TabIndex = 4;
+			this.surnameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
+			this.surnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.surnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.surnameTextBox.ForeColor = System.Drawing.Color.White;
+			this.surnameTextBox.Location = new System.Drawing.Point(143, 154);
+			this.surnameTextBox.Name = "surnameTextBox";
+			this.surnameTextBox.Size = new System.Drawing.Size(173, 26);
+			this.surnameTextBox.TabIndex = 4;
 			// 
-			// label_course
+			// courseLabel
 			// 
-			this.label_course.AutoSize = true;
-			this.label_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_course.ForeColor = System.Drawing.Color.White;
-			this.label_course.Location = new System.Drawing.Point(27, 217);
-			this.label_course.Name = "label_course";
-			this.label_course.Size = new System.Drawing.Size(64, 20);
-			this.label_course.TabIndex = 6;
-			this.label_course.Text = "Course:";
+			this.courseLabel.AutoSize = true;
+			this.courseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.courseLabel.ForeColor = System.Drawing.Color.White;
+			this.courseLabel.Location = new System.Drawing.Point(27, 217);
+			this.courseLabel.Name = "courseLabel";
+			this.courseLabel.Size = new System.Drawing.Size(64, 20);
+			this.courseLabel.TabIndex = 6;
+			this.courseLabel.Text = "Course:";
 			// 
-			// label_sdf1
+			// sdf1Label
 			// 
-			this.label_sdf1.AutoSize = true;
-			this.label_sdf1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_sdf1.ForeColor = System.Drawing.Color.White;
-			this.label_sdf1.Location = new System.Drawing.Point(24, 317);
-			this.label_sdf1.Name = "label_sdf1";
-			this.label_sdf1.Size = new System.Drawing.Size(45, 16);
-			this.label_sdf1.TabIndex = 7;
-			this.label_sdf1.Text = "SDF1:";
+			this.sdf1Label.AutoSize = true;
+			this.sdf1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.sdf1Label.ForeColor = System.Drawing.Color.White;
+			this.sdf1Label.Location = new System.Drawing.Point(24, 317);
+			this.sdf1Label.Name = "sdf1Label";
+			this.sdf1Label.Size = new System.Drawing.Size(45, 16);
+			this.sdf1Label.TabIndex = 7;
+			this.sdf1Label.Text = "SDF1:";
 			// 
-			// label_sdf2
+			// sdf2Label
 			// 
-			this.label_sdf2.AutoSize = true;
-			this.label_sdf2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_sdf2.ForeColor = System.Drawing.Color.White;
-			this.label_sdf2.Location = new System.Drawing.Point(24, 348);
-			this.label_sdf2.Name = "label_sdf2";
-			this.label_sdf2.Size = new System.Drawing.Size(45, 16);
-			this.label_sdf2.TabIndex = 9;
-			this.label_sdf2.Text = "SDF2:";
+			this.sdf2Label.AutoSize = true;
+			this.sdf2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.sdf2Label.ForeColor = System.Drawing.Color.White;
+			this.sdf2Label.Location = new System.Drawing.Point(24, 348);
+			this.sdf2Label.Name = "sdf2Label";
+			this.sdf2Label.Size = new System.Drawing.Size(45, 16);
+			this.sdf2Label.TabIndex = 9;
+			this.sdf2Label.Text = "SDF2:";
 			// 
-			// label_sdf3
+			// sdf3Label
 			// 
-			this.label_sdf3.AutoSize = true;
-			this.label_sdf3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_sdf3.ForeColor = System.Drawing.Color.White;
-			this.label_sdf3.Location = new System.Drawing.Point(24, 376);
-			this.label_sdf3.Name = "label_sdf3";
-			this.label_sdf3.Size = new System.Drawing.Size(45, 16);
-			this.label_sdf3.TabIndex = 10;
-			this.label_sdf3.Text = "SDF3:";
+			this.sdf3Label.AutoSize = true;
+			this.sdf3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.sdf3Label.ForeColor = System.Drawing.Color.White;
+			this.sdf3Label.Location = new System.Drawing.Point(24, 376);
+			this.sdf3Label.Name = "sdf3Label";
+			this.sdf3Label.Size = new System.Drawing.Size(45, 16);
+			this.sdf3Label.TabIndex = 10;
+			this.sdf3Label.Text = "SDF3:";
 			// 
 			// AddStudentButton
 			// 
@@ -680,16 +680,16 @@ namespace StudentExamScoreSystem
 			this.AddStudentButton.UseVisualStyleBackColor = false;
 			this.AddStudentButton.Click += new System.EventHandler(this.AddStudentButton_Click);
 			// 
-			// label_final
+			// finalLabel
 			// 
-			this.label_final.AutoSize = true;
-			this.label_final.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_final.ForeColor = System.Drawing.Color.White;
-			this.label_final.Location = new System.Drawing.Point(24, 405);
-			this.label_final.Name = "label_final";
-			this.label_final.Size = new System.Drawing.Size(40, 16);
-			this.label_final.TabIndex = 18;
-			this.label_final.Text = "Final:";
+			this.finalLabel.AutoSize = true;
+			this.finalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.finalLabel.ForeColor = System.Drawing.Color.White;
+			this.finalLabel.Location = new System.Drawing.Point(24, 405);
+			this.finalLabel.Name = "finalLabel";
+			this.finalLabel.Size = new System.Drawing.Size(40, 16);
+			this.finalLabel.TabIndex = 18;
+			this.finalLabel.Text = "Final:";
 			// 
 			// label_header
 			// 
@@ -702,16 +702,16 @@ namespace StudentExamScoreSystem
 			this.label_header.TabIndex = 19;
 			this.label_header.Text = "Exam scores";
 			// 
-			// label_validate_name
+			// nameValidatorLabel
 			// 
-			this.label_validate_name.AutoSize = true;
-			this.label_validate_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_validate_name.ForeColor = System.Drawing.Color.Red;
-			this.label_validate_name.Location = new System.Drawing.Point(140, 134);
-			this.label_validate_name.Name = "label_validate_name";
-			this.label_validate_name.Size = new System.Drawing.Size(67, 16);
-			this.label_validate_name.TabIndex = 21;
-			this.label_validate_name.Text = "val_name";
+			this.nameValidatorLabel.AutoSize = true;
+			this.nameValidatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nameValidatorLabel.ForeColor = System.Drawing.Color.Red;
+			this.nameValidatorLabel.Location = new System.Drawing.Point(140, 134);
+			this.nameValidatorLabel.Name = "nameValidatorLabel";
+			this.nameValidatorLabel.Size = new System.Drawing.Size(67, 16);
+			this.nameValidatorLabel.TabIndex = 21;
+			this.nameValidatorLabel.Text = "val_name";
 			// 
 			// label_validate_sdf1
 			// 
@@ -757,36 +757,36 @@ namespace StudentExamScoreSystem
 			this.label_validate_final.TabIndex = 26;
 			this.label_validate_final.Text = "label7";
 			// 
-			// label_validate_surname
+			// surnameValidatorLabel
 			// 
-			this.label_validate_surname.AutoSize = true;
-			this.label_validate_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_validate_surname.Location = new System.Drawing.Point(140, 183);
-			this.label_validate_surname.Name = "label_validate_surname";
-			this.label_validate_surname.Size = new System.Drawing.Size(85, 16);
-			this.label_validate_surname.TabIndex = 27;
-			this.label_validate_surname.Text = "val_surname";
+			this.surnameValidatorLabel.AutoSize = true;
+			this.surnameValidatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.surnameValidatorLabel.Location = new System.Drawing.Point(140, 183);
+			this.surnameValidatorLabel.Name = "surnameValidatorLabel";
+			this.surnameValidatorLabel.Size = new System.Drawing.Size(85, 16);
+			this.surnameValidatorLabel.TabIndex = 27;
+			this.surnameValidatorLabel.Text = "val_surname";
 			// 
-			// pictureBox1
+			// logo
 			// 
-			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.pictureBox1.Image = global::StudentExamScoreSystem.Properties.Resources.beu1;
-			this.pictureBox1.Location = new System.Drawing.Point(83, 0);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(163, 47);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
+			this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.logo.Image = global::StudentExamScoreSystem.Properties.Resources.beu1;
+			this.logo.Location = new System.Drawing.Point(83, 0);
+			this.logo.Name = "logo";
+			this.logo.Size = new System.Drawing.Size(163, 47);
+			this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.logo.TabIndex = 0;
+			this.logo.TabStop = false;
 			// 
-			// label_validate_course
+			// courseValidatorLabel
 			// 
-			this.label_validate_course.AutoSize = true;
-			this.label_validate_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_validate_course.Location = new System.Drawing.Point(140, 244);
-			this.label_validate_course.Name = "label_validate_course";
-			this.label_validate_course.Size = new System.Drawing.Size(45, 16);
-			this.label_validate_course.TabIndex = 29;
-			this.label_validate_course.Text = "label1";
+			this.courseValidatorLabel.AutoSize = true;
+			this.courseValidatorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.courseValidatorLabel.Location = new System.Drawing.Point(140, 244);
+			this.courseValidatorLabel.Name = "courseValidatorLabel";
+			this.courseValidatorLabel.Size = new System.Drawing.Size(45, 16);
+			this.courseValidatorLabel.TabIndex = 29;
+			this.courseValidatorLabel.Text = "label1";
 			// 
 			// label_validate_does_exist
 			// 
@@ -797,84 +797,84 @@ namespace StudentExamScoreSystem
 			this.label_validate_does_exist.TabIndex = 30;
 			this.label_validate_does_exist.Text = "label1";
 			// 
-			// comboBox_course
+			// courseComboBox
 			// 
-			this.comboBox_course.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.comboBox_course.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.comboBox_course.ForeColor = System.Drawing.Color.White;
-			this.comboBox_course.FormattingEnabled = true;
-			this.comboBox_course.Items.AddRange(new object[] {
+			this.courseComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.courseComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.courseComboBox.ForeColor = System.Drawing.Color.White;
+			this.courseComboBox.FormattingEnabled = true;
+			this.courseComboBox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-			this.comboBox_course.Location = new System.Drawing.Point(143, 216);
-			this.comboBox_course.Name = "comboBox_course";
-			this.comboBox_course.Size = new System.Drawing.Size(42, 21);
-			this.comboBox_course.TabIndex = 31;
+			this.courseComboBox.Location = new System.Drawing.Point(143, 216);
+			this.courseComboBox.Name = "courseComboBox";
+			this.courseComboBox.Size = new System.Drawing.Size(42, 21);
+			this.courseComboBox.TabIndex = 31;
 			// 
-			// panel_left
+			// leftPanel
 			// 
-			this.panel_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.panel_left.Controls.Add(this.numericUpDown_Final);
-			this.panel_left.Controls.Add(this.numericUpDown_Sdf3);
-			this.panel_left.Controls.Add(this.numericUpDown_Sdf2);
-			this.panel_left.Controls.Add(this.numericUpDown_Sdf1);
-			this.panel_left.Controls.Add(this.comboBox_course);
-			this.panel_left.Controls.Add(this.label_validate_does_exist);
-			this.panel_left.Controls.Add(this.label_validate_course);
-			this.panel_left.Controls.Add(this.pictureBox1);
-			this.panel_left.Controls.Add(this.label_validate_surname);
-			this.panel_left.Controls.Add(this.label_validate_final);
-			this.panel_left.Controls.Add(this.label_validate_sdf3);
-			this.panel_left.Controls.Add(this.label_validate_sdf2);
-			this.panel_left.Controls.Add(this.label_validate_sdf1);
-			this.panel_left.Controls.Add(this.label_validate_name);
-			this.panel_left.Controls.Add(this.label_header);
-			this.panel_left.Controls.Add(this.label_final);
-			this.panel_left.Controls.Add(this.AddStudentButton);
-			this.panel_left.Controls.Add(this.label_sdf3);
-			this.panel_left.Controls.Add(this.label_sdf2);
-			this.panel_left.Controls.Add(this.label_sdf1);
-			this.panel_left.Controls.Add(this.label_course);
-			this.panel_left.Controls.Add(this.txtbox_surname);
-			this.panel_left.Controls.Add(this.txtbox_name);
-			this.panel_left.Controls.Add(this.label_surname);
-			this.panel_left.Controls.Add(this.label_name);
-			this.panel_left.Controls.Add(this.label_add_student);
-			this.panel_left.ForeColor = System.Drawing.Color.Red;
-			this.panel_left.Location = new System.Drawing.Point(12, 12);
-			this.panel_left.Name = "panel_left";
-			this.panel_left.Size = new System.Drawing.Size(340, 528);
-			this.panel_left.TabIndex = 1;
+			this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+			this.leftPanel.Controls.Add(this.FinalNumericUpDown);
+			this.leftPanel.Controls.Add(this.sdf3NumericUpDown);
+			this.leftPanel.Controls.Add(this.sdf2NumericUpDown);
+			this.leftPanel.Controls.Add(this.sdf1NumericUpDown);
+			this.leftPanel.Controls.Add(this.courseComboBox);
+			this.leftPanel.Controls.Add(this.label_validate_does_exist);
+			this.leftPanel.Controls.Add(this.courseValidatorLabel);
+			this.leftPanel.Controls.Add(this.logo);
+			this.leftPanel.Controls.Add(this.surnameValidatorLabel);
+			this.leftPanel.Controls.Add(this.label_validate_final);
+			this.leftPanel.Controls.Add(this.label_validate_sdf3);
+			this.leftPanel.Controls.Add(this.label_validate_sdf2);
+			this.leftPanel.Controls.Add(this.label_validate_sdf1);
+			this.leftPanel.Controls.Add(this.nameValidatorLabel);
+			this.leftPanel.Controls.Add(this.label_header);
+			this.leftPanel.Controls.Add(this.finalLabel);
+			this.leftPanel.Controls.Add(this.AddStudentButton);
+			this.leftPanel.Controls.Add(this.sdf3Label);
+			this.leftPanel.Controls.Add(this.sdf2Label);
+			this.leftPanel.Controls.Add(this.sdf1Label);
+			this.leftPanel.Controls.Add(this.courseLabel);
+			this.leftPanel.Controls.Add(this.surnameTextBox);
+			this.leftPanel.Controls.Add(this.nameTextBox);
+			this.leftPanel.Controls.Add(this.surnameLabel);
+			this.leftPanel.Controls.Add(this.nameLabel);
+			this.leftPanel.Controls.Add(this.addStudentLabel);
+			this.leftPanel.ForeColor = System.Drawing.Color.Red;
+			this.leftPanel.Location = new System.Drawing.Point(12, 12);
+			this.leftPanel.Name = "leftPanel";
+			this.leftPanel.Size = new System.Drawing.Size(340, 528);
+			this.leftPanel.TabIndex = 1;
 			// 
-			// numericUpDown_Sdf1
+			// FinalNumericUpDown
 			// 
-			this.numericUpDown_Sdf1.Location = new System.Drawing.Point(97, 313);
-			this.numericUpDown_Sdf1.Name = "numericUpDown_Sdf1";
-			this.numericUpDown_Sdf1.Size = new System.Drawing.Size(43, 20);
-			this.numericUpDown_Sdf1.TabIndex = 32;
+			this.FinalNumericUpDown.Location = new System.Drawing.Point(97, 405);
+			this.FinalNumericUpDown.Name = "FinalNumericUpDown";
+			this.FinalNumericUpDown.Size = new System.Drawing.Size(43, 20);
+			this.FinalNumericUpDown.TabIndex = 35;
 			// 
-			// numericUpDown_Sdf2
+			// sdf3NumericUpDown
 			// 
-			this.numericUpDown_Sdf2.Location = new System.Drawing.Point(97, 344);
-			this.numericUpDown_Sdf2.Name = "numericUpDown_Sdf2";
-			this.numericUpDown_Sdf2.Size = new System.Drawing.Size(43, 20);
-			this.numericUpDown_Sdf2.TabIndex = 33;
+			this.sdf3NumericUpDown.Location = new System.Drawing.Point(97, 376);
+			this.sdf3NumericUpDown.Name = "sdf3NumericUpDown";
+			this.sdf3NumericUpDown.Size = new System.Drawing.Size(43, 20);
+			this.sdf3NumericUpDown.TabIndex = 34;
 			// 
-			// numericUpDown_Sdf3
+			// sdf2NumericUpDown
 			// 
-			this.numericUpDown_Sdf3.Location = new System.Drawing.Point(97, 376);
-			this.numericUpDown_Sdf3.Name = "numericUpDown_Sdf3";
-			this.numericUpDown_Sdf3.Size = new System.Drawing.Size(43, 20);
-			this.numericUpDown_Sdf3.TabIndex = 34;
+			this.sdf2NumericUpDown.Location = new System.Drawing.Point(97, 344);
+			this.sdf2NumericUpDown.Name = "sdf2NumericUpDown";
+			this.sdf2NumericUpDown.Size = new System.Drawing.Size(43, 20);
+			this.sdf2NumericUpDown.TabIndex = 33;
 			// 
-			// numericUpDown_Final
+			// sdf1NumericUpDown
 			// 
-			this.numericUpDown_Final.Location = new System.Drawing.Point(97, 405);
-			this.numericUpDown_Final.Name = "numericUpDown_Final";
-			this.numericUpDown_Final.Size = new System.Drawing.Size(43, 20);
-			this.numericUpDown_Final.TabIndex = 35;
+			this.sdf1NumericUpDown.Location = new System.Drawing.Point(97, 313);
+			this.sdf1NumericUpDown.Name = "sdf1NumericUpDown";
+			this.sdf1NumericUpDown.Size = new System.Drawing.Size(43, 20);
+			this.sdf1NumericUpDown.TabIndex = 32;
 			// 
 			// StudentExamScoreSystem
 			// 
@@ -882,94 +882,94 @@ namespace StudentExamScoreSystem
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(60)))));
 			this.ClientSize = new System.Drawing.Size(1217, 546);
-			this.Controls.Add(this.panel1);
-			this.Controls.Add(this.panel_find_student);
+			this.Controls.Add(this.sortPanel);
+			this.Controls.Add(this.findStudentPanel);
 			this.Controls.Add(this.panel_console);
-			this.Controls.Add(this.panel_left);
+			this.Controls.Add(this.leftPanel);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "StudentExamScoreSystem";
 			this.Text = "Student Exam Score System";
 			this.Load += new System.EventHandler(this.StudentExamScoreSystem_Load);
 			this.panel_console.ResumeLayout(false);
 			this.panel_console.PerformLayout();
-			this.panel_find_student.ResumeLayout(false);
-			this.panel_find_student.PerformLayout();
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			this.panel_left.ResumeLayout(false);
-			this.panel_left.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sdf1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sdf2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sdf3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Final)).EndInit();
+			this.findStudentPanel.ResumeLayout(false);
+			this.findStudentPanel.PerformLayout();
+			this.sortPanel.ResumeLayout(false);
+			this.sortPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+			this.leftPanel.ResumeLayout(false);
+			this.leftPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.FinalNumericUpDown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sdf3NumericUpDown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sdf2NumericUpDown)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.sdf1NumericUpDown)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-		private System.Windows.Forms.TextBox txtbox_console;
+		private System.Windows.Forms.TextBox consoleTextBox;
 		private System.Windows.Forms.Button ShowAllButton;
 		private System.Windows.Forms.Panel panel_console;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox comboBox_sort;
-		private System.Windows.Forms.CheckBox checkBox_reversed;
-		private System.Windows.Forms.Panel panel_find_student;
+		private System.Windows.Forms.ComboBox sortStudentsComboBox;
+		private System.Windows.Forms.CheckBox reversedCheckBox;
+		private System.Windows.Forms.Panel findStudentPanel;
 		private System.Windows.Forms.Label label_find_student;
-		private System.Windows.Forms.TextBox txtbox_find_name;
-		private System.Windows.Forms.Label label_find_name;
-		private System.Windows.Forms.TextBox txtbox_find_surname;
-		private System.Windows.Forms.Label label_find_surname;
-		private System.Windows.Forms.Label label_find_course;
-		private System.Windows.Forms.ComboBox comboBox_find_course;
+		private System.Windows.Forms.TextBox findNameTextBox;
+		private System.Windows.Forms.Label findNameLabel;
+		private System.Windows.Forms.TextBox findSurnameTextBox;
+		private System.Windows.Forms.Label findSurnameLabel;
+		private System.Windows.Forms.Label findCourseLabel;
+		private System.Windows.Forms.ComboBox findCourseComboBox;
 		private System.Windows.Forms.Button FindStudentButton;
 		private System.Windows.Forms.Label label_find_sdf1;
 		private System.Windows.Forms.TextBox txtbox_find_sdf1;
-		private System.Windows.Forms.ComboBox comboBox_find_sdf1;
+		private System.Windows.Forms.ComboBox findSdf1ComboBox;
 		private System.Windows.Forms.Label label_find_sdf2;
-		private System.Windows.Forms.ComboBox comboBox_find_sdf2;
+		private System.Windows.Forms.ComboBox findSdf2ComboBox;
 		private System.Windows.Forms.TextBox txtbox_find_sdf2;
 		private System.Windows.Forms.Label label_find_sdf3;
-		private System.Windows.Forms.ComboBox comboBox_find_sdf3;
+		private System.Windows.Forms.ComboBox findSdf3ComboBox;
 		private System.Windows.Forms.TextBox txtbox_find_sdf3;
 		private System.Windows.Forms.TextBox txtbox_find_final;
-		private System.Windows.Forms.ComboBox comboBox_find_final;
+		private System.Windows.Forms.ComboBox findFinalComboBox;
 		private System.Windows.Forms.Label label_find_final;
 		private System.Windows.Forms.TextBox txtbox_find_average;
-		private System.Windows.Forms.ComboBox comboBox_find_average;
+		private System.Windows.Forms.ComboBox findAverageComboBox;
 		private System.Windows.Forms.Label label_find_average;
-		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel sortPanel;
 		private System.Windows.Forms.Button SortButton;
 		private System.Windows.Forms.Label label_whoisare;
 		private System.Windows.Forms.ComboBox comboBox_whoisare;
 		private System.Windows.Forms.Button button_whoisare;
-		private System.Windows.Forms.Label label_add_student;
-		private System.Windows.Forms.Label label_name;
-		private System.Windows.Forms.Label label_surname;
-		private System.Windows.Forms.TextBox txtbox_name;
-		private System.Windows.Forms.TextBox txtbox_surname;
-		private System.Windows.Forms.Label label_course;
-		private System.Windows.Forms.Label label_sdf1;
-		private System.Windows.Forms.Label label_sdf2;
-		private System.Windows.Forms.Label label_sdf3;
+		private System.Windows.Forms.Label addStudentLabel;
+		private System.Windows.Forms.Label nameLabel;
+		private System.Windows.Forms.Label surnameLabel;
+		private System.Windows.Forms.TextBox nameTextBox;
+		private System.Windows.Forms.TextBox surnameTextBox;
+		private System.Windows.Forms.Label courseLabel;
+		private System.Windows.Forms.Label sdf1Label;
+		private System.Windows.Forms.Label sdf2Label;
+		private System.Windows.Forms.Label sdf3Label;
 		private System.Windows.Forms.Button AddStudentButton;
-		private System.Windows.Forms.Label label_final;
+		private System.Windows.Forms.Label finalLabel;
 		private System.Windows.Forms.Label label_header;
-		private System.Windows.Forms.Label label_validate_name;
+		private System.Windows.Forms.Label nameValidatorLabel;
 		private System.Windows.Forms.Label label_validate_sdf1;
 		private System.Windows.Forms.Label label_validate_sdf2;
 		private System.Windows.Forms.Label label_validate_sdf3;
 		private System.Windows.Forms.Label label_validate_final;
-		private System.Windows.Forms.Label label_validate_surname;
-		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label label_validate_course;
+		private System.Windows.Forms.Label surnameValidatorLabel;
+		private System.Windows.Forms.PictureBox logo;
+		private System.Windows.Forms.Label courseValidatorLabel;
 		private System.Windows.Forms.Label label_validate_does_exist;
-		private System.Windows.Forms.ComboBox comboBox_course;
-		private System.Windows.Forms.Panel panel_left;
-		private System.Windows.Forms.NumericUpDown numericUpDown_Final;
-		private System.Windows.Forms.NumericUpDown numericUpDown_Sdf3;
-		private System.Windows.Forms.NumericUpDown numericUpDown_Sdf2;
-		private System.Windows.Forms.NumericUpDown numericUpDown_Sdf1;
+		private System.Windows.Forms.ComboBox courseComboBox;
+		private System.Windows.Forms.Panel leftPanel;
+		private System.Windows.Forms.NumericUpDown FinalNumericUpDown;
+		private System.Windows.Forms.NumericUpDown sdf3NumericUpDown;
+		private System.Windows.Forms.NumericUpDown sdf2NumericUpDown;
+		private System.Windows.Forms.NumericUpDown sdf1NumericUpDown;
 	}
 }
 
