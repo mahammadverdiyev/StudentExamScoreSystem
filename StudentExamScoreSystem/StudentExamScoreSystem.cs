@@ -137,12 +137,25 @@ namespace StudentExamScoreSystem
 
 			bool reversed = reversedCheckBox.Checked;
 
-			string selectedSortingTypeInString = sortStudentsComboBox.SelectedItem.ToString();
+
+			//string selectedSortingTypeInString = sortStudentsComboBox.SelectedItem.ToString();
+
+			if(sortStudentsComboBox.SelectedItem == null)
+            {
+				return;
+            }
+
+			string selectedSortingTypeInString =
+				string.Join("", sortStudentsComboBox.SelectedItem.ToString().Split(' '));
+
+            Console.WriteLine(selectedSortingTypeInString);
 
 			SortingParameterFactory.SortingType selectedSortingType = (SortingParameterFactory.SortingType)Enum.Parse(
 				typeof(SortingParameterFactory.SortingType),
 				selectedSortingTypeInString
 				);
+
+            Console.WriteLine("ENUM: " + selectedSortingType.ToString());
 
 			List<IStudent> sortedStudentList;
 
@@ -336,5 +349,10 @@ namespace StudentExamScoreSystem
 
 			PrintStudentList(studentsWeSearch);
 		}
-	}
+
+        private void button_whoisare_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
