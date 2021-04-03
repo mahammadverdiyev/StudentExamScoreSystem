@@ -1,7 +1,7 @@
 ﻿
 namespace StudentExamScoreSystem
 {
-	partial class StudentExamScoreSystem
+	partial class StudentExamScoreSys
 	{
 		/// <summary>
 		/// Required designer variable.

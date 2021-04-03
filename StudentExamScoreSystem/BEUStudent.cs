@@ -9,8 +9,8 @@ namespace StudentExamScoreSystem
 		private int course;
 		private int id;
 
-		public string GetName() => name;
-		public string GetSurname() => surname;
+        public string GetName() => name;
+        public string GetSurname() => surname;
 		public int GetCourse() => course;
 		public int GetId() => id;
 

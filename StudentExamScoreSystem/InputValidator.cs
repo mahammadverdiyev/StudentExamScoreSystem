@@ -4,9 +4,9 @@ namespace StudentExamScoreSystem
 {
 	public class InputValidator
 	{
-		StudentExamScoreSystem system;
+		StudentExamScoreSys system;
 
-		public InputValidator(StudentExamScoreSystem system)
+		public InputValidator(StudentExamScoreSys system)
 		{
 			this.system = system;
 		}

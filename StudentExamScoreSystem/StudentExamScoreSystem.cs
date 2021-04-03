@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace StudentExamScoreSystem
 {
-	public partial class StudentExamScoreSystem : Form
+	public partial class StudentExamScoreSys : Form
 	{
 		private List<IStudent> students;
 
@@ -20,7 +20,7 @@ namespace StudentExamScoreSystem
 		public TextBox SurnameTextbox => surnameTextBox;
 		public ComboBox CourseComboBox => courseComboBox;
 
-		public StudentExamScoreSystem()
+		public StudentExamScoreSys()
 		{
 			InitializeComponent();
 		}
@@ -347,5 +347,6 @@ namespace StudentExamScoreSystem
         {
 
         }
+
     }
 }
