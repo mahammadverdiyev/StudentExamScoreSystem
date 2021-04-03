@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decryptor.cs" />
+    <Compile Include="Encryptor.cs" />
     <Compile Include="ExamScore.cs" />
     <Compile Include="InputValidator.cs" />
     <Compile Include="IStudent.cs" />

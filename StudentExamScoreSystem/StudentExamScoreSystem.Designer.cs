@@ -77,20 +77,16 @@ namespace StudentExamScoreSystem
             this.finalLabel = new System.Windows.Forms.Label();
             this.label_header = new System.Windows.Forms.Label();
             this.nameValidatorLabel = new System.Windows.Forms.Label();
-            this.label_validate_sdf1 = new System.Windows.Forms.Label();
-            this.label_validate_sdf2 = new System.Windows.Forms.Label();
-            this.label_validate_sdf3 = new System.Windows.Forms.Label();
-            this.label_validate_final = new System.Windows.Forms.Label();
             this.surnameValidatorLabel = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.courseValidatorLabel = new System.Windows.Forms.Label();
-            this.label_validate_does_exist = new System.Windows.Forms.Label();
             this.courseComboBox = new System.Windows.Forms.ComboBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.FinalNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.sdf3NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.sdf2NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.sdf1NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label_validate_does_exist = new System.Windows.Forms.Label();
             this.panel_console.SuspendLayout();
             this.findStudentPanel.SuspendLayout();
             this.sortPanel.SuspendLayout();
@@ -714,50 +710,6 @@ namespace StudentExamScoreSystem
             this.nameValidatorLabel.TabIndex = 21;
             this.nameValidatorLabel.Text = "val_name";
             // 
-            // label_validate_sdf1
-            // 
-            this.label_validate_sdf1.AutoSize = true;
-            this.label_validate_sdf1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_validate_sdf1.ForeColor = System.Drawing.Color.Red;
-            this.label_validate_sdf1.Location = new System.Drawing.Point(171, 317);
-            this.label_validate_sdf1.Name = "label_validate_sdf1";
-            this.label_validate_sdf1.Size = new System.Drawing.Size(45, 16);
-            this.label_validate_sdf1.TabIndex = 23;
-            this.label_validate_sdf1.Text = "label4";
-            // 
-            // label_validate_sdf2
-            // 
-            this.label_validate_sdf2.AutoSize = true;
-            this.label_validate_sdf2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_validate_sdf2.ForeColor = System.Drawing.Color.Red;
-            this.label_validate_sdf2.Location = new System.Drawing.Point(171, 348);
-            this.label_validate_sdf2.Name = "label_validate_sdf2";
-            this.label_validate_sdf2.Size = new System.Drawing.Size(45, 16);
-            this.label_validate_sdf2.TabIndex = 24;
-            this.label_validate_sdf2.Text = "label5";
-            // 
-            // label_validate_sdf3
-            // 
-            this.label_validate_sdf3.AutoSize = true;
-            this.label_validate_sdf3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_validate_sdf3.ForeColor = System.Drawing.Color.Red;
-            this.label_validate_sdf3.Location = new System.Drawing.Point(171, 376);
-            this.label_validate_sdf3.Name = "label_validate_sdf3";
-            this.label_validate_sdf3.Size = new System.Drawing.Size(45, 16);
-            this.label_validate_sdf3.TabIndex = 25;
-            this.label_validate_sdf3.Text = "label6";
-            // 
-            // label_validate_final
-            // 
-            this.label_validate_final.AutoSize = true;
-            this.label_validate_final.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_validate_final.ForeColor = System.Drawing.Color.Red;
-            this.label_validate_final.Location = new System.Drawing.Point(171, 405);
-            this.label_validate_final.Name = "label_validate_final";
-            this.label_validate_final.Size = new System.Drawing.Size(45, 16);
-            this.label_validate_final.TabIndex = 26;
-            this.label_validate_final.Text = "label7";
-            // 
             // surnameValidatorLabel
             // 
             this.surnameValidatorLabel.AutoSize = true;
@@ -789,15 +741,6 @@ namespace StudentExamScoreSystem
             this.courseValidatorLabel.TabIndex = 29;
             this.courseValidatorLabel.Text = "label1";
             // 
-            // label_validate_does_exist
-            // 
-            this.label_validate_does_exist.AutoSize = true;
-            this.label_validate_does_exist.Location = new System.Drawing.Point(121, 444);
-            this.label_validate_does_exist.Name = "label_validate_does_exist";
-            this.label_validate_does_exist.Size = new System.Drawing.Size(35, 13);
-            this.label_validate_does_exist.TabIndex = 30;
-            this.label_validate_does_exist.Text = "label1";
-            // 
             // courseComboBox
             // 
             this.courseComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
@@ -826,10 +769,6 @@ namespace StudentExamScoreSystem
             this.leftPanel.Controls.Add(this.courseValidatorLabel);
             this.leftPanel.Controls.Add(this.logo);
             this.leftPanel.Controls.Add(this.surnameValidatorLabel);
-            this.leftPanel.Controls.Add(this.label_validate_final);
-            this.leftPanel.Controls.Add(this.label_validate_sdf3);
-            this.leftPanel.Controls.Add(this.label_validate_sdf2);
-            this.leftPanel.Controls.Add(this.label_validate_sdf1);
             this.leftPanel.Controls.Add(this.nameValidatorLabel);
             this.leftPanel.Controls.Add(this.label_header);
             this.leftPanel.Controls.Add(this.finalLabel);
@@ -877,6 +816,15 @@ namespace StudentExamScoreSystem
             this.sdf1NumericUpDown.Size = new System.Drawing.Size(43, 20);
             this.sdf1NumericUpDown.TabIndex = 32;
             // 
+            // label_validate_does_exist
+            // 
+            this.label_validate_does_exist.AutoSize = true;
+            this.label_validate_does_exist.Location = new System.Drawing.Point(121, 444);
+            this.label_validate_does_exist.Name = "label_validate_does_exist";
+            this.label_validate_does_exist.Size = new System.Drawing.Size(35, 13);
+            this.label_validate_does_exist.TabIndex = 30;
+            this.label_validate_does_exist.Text = "label1";
+            // 
             // StudentExamScoreSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -887,7 +835,7 @@ namespace StudentExamScoreSystem
             this.Controls.Add(this.findStudentPanel);
             this.Controls.Add(this.panel_console);
             this.Controls.Add(this.leftPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentExamScoreSystem";
             this.Text = "Student Exam Score System";
             this.Load += new System.EventHandler(this.StudentExamScoreSystem_Load);
@@ -957,20 +905,16 @@ namespace StudentExamScoreSystem
 		private System.Windows.Forms.Label finalLabel;
 		private System.Windows.Forms.Label label_header;
 		private System.Windows.Forms.Label nameValidatorLabel;
-		private System.Windows.Forms.Label label_validate_sdf1;
-		private System.Windows.Forms.Label label_validate_sdf2;
-		private System.Windows.Forms.Label label_validate_sdf3;
-		private System.Windows.Forms.Label label_validate_final;
 		private System.Windows.Forms.Label surnameValidatorLabel;
 		private System.Windows.Forms.PictureBox logo;
 		private System.Windows.Forms.Label courseValidatorLabel;
-		private System.Windows.Forms.Label label_validate_does_exist;
 		private System.Windows.Forms.ComboBox courseComboBox;
 		private System.Windows.Forms.Panel leftPanel;
 		private System.Windows.Forms.NumericUpDown FinalNumericUpDown;
 		private System.Windows.Forms.NumericUpDown sdf3NumericUpDown;
 		private System.Windows.Forms.NumericUpDown sdf2NumericUpDown;
 		private System.Windows.Forms.NumericUpDown sdf1NumericUpDown;
-	}
+        private System.Windows.Forms.Label label_validate_does_exist;
+    }
 }
 

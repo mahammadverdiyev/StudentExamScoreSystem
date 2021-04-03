@@ -38,6 +38,7 @@ namespace StudentExamScoreSystem
 				return false;
 			}
 
+			system.NameValidatorLabel.Text = "";
 			return true;
 		}
 
@@ -51,6 +52,7 @@ namespace StudentExamScoreSystem
 				return false;
 			}
 
+			system.SurnameValidatorLabel.Text = "";
 			return true;
 		}
 
@@ -58,12 +60,14 @@ namespace StudentExamScoreSystem
 
 		public bool IsCourseValid()
 		{
-			if (system.CourseComboBox.SelectedItem != null)
+			if (system.CourseComboBox.SelectedItem == null)
 			{
-				return true;
+				system.CourseValidaterLabel.Text = "You should enter you course";
+				return false;
 			}
 
-			return false;
+			system.CourseValidaterLabel.Text = "";
+			return true;
 		}
 
 	}

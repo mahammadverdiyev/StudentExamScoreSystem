@@ -30,7 +30,9 @@ namespace StudentExamScoreSystem
 			students = new List<IStudent>();
 			inputValidator = new InputValidator(this);
 
-			ResetLabels();
+            //this.MaximumSize = new System.Drawing.Size(1233, 585);
+
+            ResetLabels();
 
 			students.Add(new BEUStudent("Mahammad", "Verdiyev", 2, 456465, new ExamScore(53, 87, 69, 74)));
 			students.Add(new BEUStudent("Kamil", "Abiyev", 3, 784394, new ExamScore(85, 71, 65, 77)));
@@ -43,10 +45,6 @@ namespace StudentExamScoreSystem
 		{
 			nameValidatorLabel.Text = "";
 			surnameValidatorLabel.Text = "";
-			label_validate_sdf1.Text = "";
-			label_validate_sdf2.Text = "";
-			label_validate_sdf3.Text = "";
-			label_validate_final.Text = "";
 			courseValidatorLabel.Text = "";
 			label_validate_does_exist.Text = "";
 		}
@@ -137,9 +135,6 @@ namespace StudentExamScoreSystem
 
 			bool reversed = reversedCheckBox.Checked;
 
-
-			//string selectedSortingTypeInString = sortStudentsComboBox.SelectedItem.ToString();
-
 			if(sortStudentsComboBox.SelectedItem == null)
             {
 				return;
@@ -154,8 +149,6 @@ namespace StudentExamScoreSystem
 				typeof(SortingParameterFactory.SortingType),
 				selectedSortingTypeInString
 				);
-
-            Console.WriteLine("ENUM: " + selectedSortingType.ToString());
 
 			List<IStudent> sortedStudentList;
 
