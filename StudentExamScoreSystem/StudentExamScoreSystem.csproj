@@ -51,12 +51,14 @@
     <Compile Include="ExamScore.cs" />
     <Compile Include="InputValidator.cs" />
     <Compile Include="IStudent.cs" />
+    <Compile Include="IValidator.cs" />
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationValidator.cs" />
     <Compile Include="SortingParameterFactory.cs" />
     <Compile Include="StudentExamScoreSystem.cs">
       <SubType>Form</SubType>
@@ -104,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\beu2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

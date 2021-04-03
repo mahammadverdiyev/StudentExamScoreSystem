@@ -12,11 +12,13 @@ namespace StudentExamScoreSystem
 {
     public partial class LoginScreen : Form
     {
+
         public LoginScreen()
         {
             InitializeComponent();
         }
-
+        RegistrationValidator registrationValidator;
+        int sliderDisplacement = 28;
         bool isUsernameActive = true;
         bool isPasswordActive = true;
         bool isNameActive = true;
@@ -28,6 +30,16 @@ namespace StudentExamScoreSystem
         Color grayColor = Color.FromArgb(149, 156, 161);
 
 
+        public Label NameValidatorLabel => nameValidatorLabel;
+        public Label SurnameValidatorLabel => surnameValidatorLabel;
+        public Label RegisterUserNameValidatorLabel => registerUserNameValidatorLabel;
+        public Label RegisterPasswordValidatorLabel => RegisterPasswordValidatorLabel;
+
+        public TextBox _NameTextBox => this.NameTextBox;
+        public TextBox _SurnameTextBox => this.SurnameTextBox;
+        public TextBox RUsernameTextBox => this.registerUserNameTextBox;
+        public TextBox RPasswordTextBox => this.registerPasswordTextBox;
+        public TextBox ConfirmTextBox => this.confirmTextBox;
 
 
         public void InitializeFocus()
@@ -222,18 +234,26 @@ namespace StudentExamScoreSystem
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-            Console.WriteLine(passwordTextBox.PasswordChar);
             InitializeFocus();
+            registrationValidator = new RegistrationValidator(this);
         }
 
         private void LoginTab_Click(object sender, EventArgs e)
         {
+            //Slider.Location = new Point(7, 95);
+            timer_slider.Start();
+            RegisterTab.BackColor = Color.FromArgb(59, 102, 128);
+            LoginTab.BackColor = Color.FromArgb(23, 117, 173);
             LoginPanel.Show();
             RegistrationPanel.Hide();
         }
 
         private void RegisterTab_Click(object sender, EventArgs e)
         {
+            //Slider.Location = new Point(243, 95);
+            timer_slider.Start();
+            LoginTab.BackColor = Color.FromArgb(59, 102, 128);
+            RegisterTab.BackColor = Color.FromArgb(23, 117, 173);
             RegistrationPanel.Show();
             LoginPanel.Hide();
         }
@@ -247,6 +267,60 @@ namespace StudentExamScoreSystem
             else
             {
                 passwordTextBox.PasswordChar = '•';
+            }
+        }
+
+        private void ExitButton_MouseEnter(object sender, EventArgs e)
+        {
+            ExitButton.BackColor = Color.FromArgb(179, 71, 71);
+        }
+
+        private void ExitButton_MouseLeave(object sender, EventArgs e)
+        {
+            ExitButton.BackColor = Color.FromArgb(32, 51, 60);
+        }
+
+        private void AddStudentButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(registerPasswordTextBox.Text);
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void timer_slider_Tick(object sender, EventArgs e)
+        {
+            int currX = Slider.Location.X;
+            int currY = Slider.Location.Y;
+
+            if (sliderDisplacement > 0)
+            {
+                if ((RegisterTab.Location.X - Slider.Location.X) >= sliderDisplacement)
+                {
+                    Slider.Location = new Point(currX + sliderDisplacement, currY);
+                }
+                else
+                {
+                    Slider.Location = new Point(RegisterTab.Location.X, currY);
+                    sliderDisplacement = -sliderDisplacement;
+                    timer_slider.Stop();
+                }
+            }
+            else
+            {
+                if ((Slider.Location.X - LoginTab.Location.X) >= -sliderDisplacement)
+                {
+                    Slider.Location = new Point(currX + sliderDisplacement, currY);
+                }
+                else
+                {
+                    Slider.Location = new Point(LoginTab.Location.X, currY);
+                    sliderDisplacement = -sliderDisplacement;
+                    timer_slider.Stop();
+                }
+
             }
         }
     }

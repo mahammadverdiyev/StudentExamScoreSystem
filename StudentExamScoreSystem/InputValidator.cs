@@ -2,7 +2,7 @@
 
 namespace StudentExamScoreSystem
 {
-	public class InputValidator
+	public class InputValidator : IValidator
 	{
 		StudentExamScoreSys system;
 
