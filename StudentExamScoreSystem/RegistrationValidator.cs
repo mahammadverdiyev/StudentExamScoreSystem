@@ -38,7 +38,7 @@ namespace StudentExamScoreSystem
 
         private bool NameInputIsValid()
         {
-            if (NameIsCorrect())
+            if (IsNameIncorrect())
             {
                 screen.NameValidatorLabel.Text = "Enter first name";
                 return false;
@@ -47,12 +47,14 @@ namespace StudentExamScoreSystem
             screen.NameValidatorLabel.Text = "";
             return true;
         }
-        private bool NameIsCorrect() => screen._NameTextBox.Text.Trim().Length == 0 || screen._NameTextBox.Text.Any(char.IsDigit);
-
+        private bool IsNameIncorrect() =>
+            screen._NameTextBox.Text.Trim().Equals("First name")
+         || screen._NameTextBox.Text.Any(char.IsDigit)
+         || screen._NameTextBox.Text.Where(char.IsLetter).Count() == 0;
 
         private bool SurnameInputIsValid()
         {
-            if (SurnameIsCorrect())
+            if (IsSurnameIncorrect())
             {
                 screen.SurnameValidatorLabel.Text = "Enter last name";
                 return false;
@@ -61,7 +63,10 @@ namespace StudentExamScoreSystem
             screen.SurnameValidatorLabel.Text = "";
             return true;
         }
-        private bool SurnameIsCorrect() => screen._SurnameTextBox.Text.Trim().Length == 0 || screen._SurnameTextBox.Text.Any(char.IsDigit);
+        private bool IsSurnameIncorrect() => 
+            screen._SurnameTextBox.Text.Trim().Equals("Last name")
+        || screen._SurnameTextBox.Text.Any(char.IsDigit)
+        || screen._SurnameTextBox.Text.Where(char.IsLetter).Count() == 0;
 
 
         private bool UsernameInputIsValid()
@@ -69,7 +74,22 @@ namespace StudentExamScoreSystem
             string username = screen.RUsernameTextBox.Text.Trim();
 
             if (username.Length == 0)
+            {
+                screen.RegisterUserNameValidatorLabel.Text = "Enter username";
                 return false;
+            }
+
+            if (username.Where(Char.IsLetter).Count() == 0)
+            {
+                screen.RegisterUserNameValidatorLabel.Text = "Wrong username format";
+                return false;
+            }
+            
+            if (username.Equals("Username"))
+            {
+                screen.RegisterUserNameValidatorLabel.Text = "Enter valid username";
+                return false;
+            }
             
             List<string> allUserData = UserFileUtil.GetAllUserData();
 

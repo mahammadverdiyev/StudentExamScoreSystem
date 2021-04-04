@@ -29,7 +29,12 @@ namespace StudentExamScoreSystem
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StudentExamScoreSystem());
             //Application.Run(new LoginScreen());
+            PrintAllUserData();
 
+        }
+
+        public static void PrintAllUserData()
+        {
             List<string> lines = UserFileUtil.GetAllUserData();
             foreach (string line in lines)
             {

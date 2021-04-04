@@ -186,7 +186,7 @@ namespace StudentExamScoreSystem
             this.RegisterUserButton.Location = new System.Drawing.Point(170, 376);
             this.RegisterUserButton.Name = "RegisterUserButton";
             this.RegisterUserButton.Size = new System.Drawing.Size(104, 31);
-            this.RegisterUserButton.TabIndex = 13;
+            this.RegisterUserButton.TabIndex = 15;
             this.RegisterUserButton.Text = "Register";
             this.RegisterUserButton.UseVisualStyleBackColor = false;
             this.RegisterUserButton.Click += new System.EventHandler(this.RegisterUserButton_Click);
@@ -233,7 +233,7 @@ namespace StudentExamScoreSystem
             this.confirmTextBox.Location = new System.Drawing.Point(100, 313);
             this.confirmTextBox.Name = "confirmTextBox";
             this.confirmTextBox.Size = new System.Drawing.Size(251, 26);
-            this.confirmTextBox.TabIndex = 8;
+            this.confirmTextBox.TabIndex = 14;
             // 
             // registerPasswordTextBox
             // 
@@ -244,7 +244,7 @@ namespace StudentExamScoreSystem
             this.registerPasswordTextBox.Location = new System.Drawing.Point(100, 278);
             this.registerPasswordTextBox.Name = "registerPasswordTextBox";
             this.registerPasswordTextBox.Size = new System.Drawing.Size(251, 26);
-            this.registerPasswordTextBox.TabIndex = 6;
+            this.registerPasswordTextBox.TabIndex = 13;
             // 
             // registerUserNameTextBox
             // 
@@ -255,7 +255,7 @@ namespace StudentExamScoreSystem
             this.registerUserNameTextBox.Location = new System.Drawing.Point(100, 213);
             this.registerUserNameTextBox.Name = "registerUserNameTextBox";
             this.registerUserNameTextBox.Size = new System.Drawing.Size(251, 26);
-            this.registerUserNameTextBox.TabIndex = 4;
+            this.registerUserNameTextBox.TabIndex = 12;
             // 
             // LoginTab
             // 

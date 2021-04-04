@@ -16,9 +16,19 @@ namespace StudentExamScoreSystem
         {
             if (!File.Exists(USER_DATA_PATH))
             {
-                File.Create(USER_DATA_PATH);
+                // soon we'll read data from file, so
+                // in order to get rid of
+                // "being used another process" exception
+                // we have to close FileStream object
+                using (var fileStream = File.Create(USER_DATA_PATH))
+                {
+
+                }
+                
                 return new List<string>(); 
             }
+            var info = new FileInfo(USER_DATA_PATH);
+            
             if(new FileInfo(USER_DATA_PATH).Length == 0)
             {
                 return new List<string>();
