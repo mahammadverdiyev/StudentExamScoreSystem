@@ -10,11 +10,18 @@ namespace StudentExamScoreSystem
 {
     class Decryptor
     {
+
         private const string _SALT = "g46dzQ80";
         private const string _INITVECTOR = "OFRna74m*aze01xY";
 
         private static byte[] _saltBytes;
         private static byte[] _initVectorBytes;
+
+        static Decryptor()
+        {
+            _saltBytes = Encoding.UTF8.GetBytes(_SALT);
+            _initVectorBytes = Encoding.UTF8.GetBytes(_INITVECTOR);
+        }
 
         public static string Decrypt(string cipherText, string password, string salt = null, string initialVector = null)
         {

@@ -13,6 +13,12 @@ namespace StudentExamScoreSystem
         private static byte[] _saltBytes;
         private static byte[] _initVectorBytes;
 
+        static Encryptor()
+        {
+            _saltBytes = Encoding.UTF8.GetBytes(_SALT);
+            _initVectorBytes = Encoding.UTF8.GetBytes(_INITVECTOR);
+        }
+
         public static string Encrypt(string plainText, string password, string salt = null, string initialVector = null)
         {
             return Convert.ToBase64String(EncryptToBytes(plainText, password, salt, initialVector));

@@ -33,7 +33,7 @@ namespace StudentExamScoreSystem
         public Label NameValidatorLabel => nameValidatorLabel;
         public Label SurnameValidatorLabel => surnameValidatorLabel;
         public Label RegisterUserNameValidatorLabel => registerUserNameValidatorLabel;
-        public Label RegisterPasswordValidatorLabel => RegisterPasswordValidatorLabel;
+        public Label RegisterPasswordValidatorLabel => registerPasswordValidatorLabel;
 
         public TextBox _NameTextBox => this.NameTextBox;
         public TextBox _SurnameTextBox => this.SurnameTextBox;
@@ -231,9 +231,17 @@ namespace StudentExamScoreSystem
 
 
 
+        private void ResetLabels()
+        {
+            nameValidatorLabel.Text = "";
+            surnameValidatorLabel.Text = "";
+            registerUserNameValidatorLabel.Text = "";
+            registerPasswordValidatorLabel.Text = "";
+        }
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
+            ResetLabels();
             InitializeFocus();
             registrationValidator = new RegistrationValidator(this);
         }
@@ -280,11 +288,6 @@ namespace StudentExamScoreSystem
             ExitButton.BackColor = Color.FromArgb(32, 51, 60);
         }
 
-        private void AddStudentButton_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(registerPasswordTextBox.Text);
-        }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -323,6 +326,31 @@ namespace StudentExamScoreSystem
 
             }
         }
+
+        private void AddNewUser(List<string> allUserData)
+        {
+            string name = NameTextBox.Text.Trim();
+            string surname = SurnameTextBox.Text.Trim();
+            string username = registerUserNameTextBox.Text.Trim();
+            string password = registerPasswordTextBox.Text.Trim();
+            string line = $"{username} {name} {surname} {password}";
+            Console.WriteLine(allUserData.Count);
+            int index = allUserData.Count == 0 ? 0 : allUserData.Count - 1;
+            allUserData.Insert(index, line);
+        }
+
+        private void RegisterUserButton_Click(object sender, EventArgs e)
+        {
+            bool canAccess = registrationValidator.AreAllInputsValid();
+            if (canAccess)
+            {
+                List<string> allUserData = UserFileUtil.GetAllUserData();
+                AddNewUser(allUserData);
+                UserFileUtil.EncryptAllDataInList(allUserData);
+                MessageBox.Show("Successfully registered!");
+            }
+        }
+
     }
 
 }
