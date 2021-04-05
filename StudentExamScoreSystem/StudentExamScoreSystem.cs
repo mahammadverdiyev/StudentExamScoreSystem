@@ -36,12 +36,13 @@ namespace StudentExamScoreSystem
 
 		public StudentExamScoreSys()
         {
-            Thread trd = new Thread(new ThreadStart(RunLoadingScreen));
-            trd.Start();
-            Thread.Sleep(12000);
-			InitializeComponent();
-            trd.Abort();
+            //Thread trd = new Thread(new ThreadStart(RunLoadingScreen));
+            //         trd.Start();
+            //         Thread.Sleep(12000);
+            InitializeComponent();
+            //trd.Abort();
         }
+
 		private void RunLoadingScreen()
 		{
 			Application.Run(new LoadingScreen());
@@ -69,7 +70,8 @@ namespace StudentExamScoreSystem
 			InitializeCustomFont();
 			this.WindowState = FormWindowState.Minimized;
 			this.WindowState = FormWindowState.Normal;
-			this.Focus(); this.Show();
+			this.Focus(); 
+			//this.Show();
 
 
 			students = new List<IStudent>();

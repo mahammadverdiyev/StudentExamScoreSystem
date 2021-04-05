@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StudentExamScoreSystem
@@ -7,12 +9,15 @@ namespace StudentExamScoreSystem
     public partial class LoadingScreen : Form
     {
 
+        StudentExamScoreSys system;
+
         private int picSpeed = 1;
         private int picSpeedChanger = 1;
         private int pictureIndex = 1;
 
 
         private int slideSpeed = 10;
+
 
         private Bitmap[] pictures = new Bitmap[]
         {
@@ -28,10 +33,16 @@ namespace StudentExamScoreSystem
             InitializeComponent();
         }
 
+        public void SetSystem(StudentExamScoreSys system)
+        {
+            this.system = system;
+        }
+
         private void LoadingScreen_Load(object sender, EventArgs e)
         {
             slideAnimationTimer.Start();
             pictureAnimationInvoker.Start();
+            screenCloseTimer.Start();
         }
 
         private void pictureAnimationTimer_Tick(object sender, EventArgs e)
@@ -89,6 +100,12 @@ namespace StudentExamScoreSystem
             {
                 SlidePanel.Location = new Point(-width, currY);
             }
+        }
+
+        private void screenCloseTimer_Tick(object sender, EventArgs e)
+        {
+            system.Show();
+            this.Close();
         }
     }
 }

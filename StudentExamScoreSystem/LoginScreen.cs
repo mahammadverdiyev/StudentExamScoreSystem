@@ -16,9 +16,10 @@ namespace StudentExamScoreSystem
         int currentTabIndex = 0;
         RegistrationValidator registrationValidator;
         LoginValidator loginValidator;
-        int sliderDisplacement = 28;
+        int sliderDisplacement = 25;
         
         StudentExamScoreSys system;
+        LoadingScreen loadingScreen;
 
         public Label NameValidatorLabel => nameValidatorLabel;
         public Label SurnameValidatorLabel => surnameValidatorLabel;
@@ -142,10 +143,15 @@ namespace StudentExamScoreSystem
             }
         }
 
+        private string FilterText(string text)
+        {
+            return $"{text.Substring(0,1).ToUpper()}{text.Substring(1).ToLower()}";
+        }
+
         private void AddNewUser(List<string> allUserData)
         {
-            string name = NameTextBox.Text.Trim();
-            string surname = SurnameTextBox.Text.Trim();
+            string name = FilterText(NameTextBox.Text.Trim());
+            string surname = FilterText(SurnameTextBox.Text.Trim());
             string username = registerUserNameTextBox.Text.Trim();
             string password = registerPasswordTextBox.Text.Trim();
             string line = $"{username} {name} {surname} {password}";
@@ -180,8 +186,15 @@ namespace StudentExamScoreSystem
         private void StartSystem()
         {
             InitializeSystem();
+            InitializeLoadingScreen();
             this.Hide();
-            system.Show();
+            loadingScreen.Show();
+        }
+
+        private void InitializeLoadingScreen()
+        {
+            loadingScreen = new LoadingScreen();
+            loadingScreen.SetSystem(system);
         }
 
 
@@ -191,8 +204,8 @@ namespace StudentExamScoreSystem
             if (canAccess)
             {
                 List<string> allUserData = UserFileUtil.GetAllUserData();
+              
                 AddNewUser(allUserData);
-
 
                 string encryptedData =
                     UserFileUtil.EncryptAllDataInList(allUserData);

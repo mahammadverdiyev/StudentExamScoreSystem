@@ -37,6 +37,7 @@ namespace StudentExamScoreSystem
             this.slideAnimationTimer = new System.Windows.Forms.Timer(this.components);
             this.nextButton = new System.Windows.Forms.Button();
             this.MyPicture = new System.Windows.Forms.PictureBox();
+            this.screenCloseTimer = new System.Windows.Forms.Timer(this.components);
             this.ProgressBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyPicture)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +101,11 @@ namespace StudentExamScoreSystem
             this.MyPicture.TabIndex = 3;
             this.MyPicture.TabStop = false;
             // 
+            // screenCloseTimer
+            // 
+            this.screenCloseTimer.Interval = 12000;
+            this.screenCloseTimer.Tick += new System.EventHandler(this.screenCloseTimer_Tick);
+            // 
             // LoadingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,5 +136,6 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.Timer pictureAnimationInvoker;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Timer slideAnimationTimer;
+        private System.Windows.Forms.Timer screenCloseTimer;
     }
 }
