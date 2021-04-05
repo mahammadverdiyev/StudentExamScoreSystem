@@ -105,6 +105,12 @@ namespace StudentExamScoreSystem
             string password = screen.RPasswordTextBox.Text.Trim();
             string confirmed = screen.ConfirmTextBox.Text.Trim();
 
+            if (IsPasswordEmpty(password, confirmed))
+            {
+                screen.RegisterPasswordValidatorLabel.Text = "Enter password";
+                return false;
+            }
+
             bool equal = password.Equals(confirmed);
 
             if (!equal) 
@@ -116,6 +122,9 @@ namespace StudentExamScoreSystem
             screen.RegisterPasswordValidatorLabel.Text = "";
             return true;
         }
+
+        private bool IsPasswordEmpty(string password, string confirmed) =>
+                password.Length == 0 || confirmed.Length == 0;
 
     }
 }

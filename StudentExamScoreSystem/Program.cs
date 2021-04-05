@@ -9,8 +9,8 @@ namespace StudentExamScoreSystem
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StudentExamScoreSys());
             //Application.Run(new CurrentUserInfo());
             //Application.Run(new StudentExamScoreSys());

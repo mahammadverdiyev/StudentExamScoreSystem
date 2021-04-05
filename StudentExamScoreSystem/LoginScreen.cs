@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.Threading;
 
 namespace StudentExamScoreSystem
 {
@@ -178,23 +177,10 @@ namespace StudentExamScoreSystem
             };
         }
 
-        private void ShowLoadingScreen()
-        {
-            Thread trd = new Thread(new ThreadStart(RunLoadingScreen));
-            trd.Start();
-            Thread.Sleep(12000);
-            trd.Abort();
-        }
-        private void RunLoadingScreen()
-        {
-            Application.Run(new LoadingScreen());
-        }
-
         private void StartSystem()
         {
             InitializeSystem();
             this.Hide();
-            ShowLoadingScreen();
             system.Show();
         }
 

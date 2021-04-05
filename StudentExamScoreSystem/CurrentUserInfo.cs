@@ -38,11 +38,15 @@ namespace StudentExamScoreSystem
 
         private void ReadCurrentUserData()
         {
-            string userData = File.ReadAllText(UserFileUtil.CURRENT_USER_DATA_PATH);
-            string[] splittedData = userData.Split(' ');
-            UsernameLabel.Text = splittedData[0];
-            NameLabel.Text = splittedData[1];
-            SurnameLabel.Text = splittedData[2];
+            if (File.Exists(UserFileUtil.CURRENT_USER_DATA_PATH))
+            {
+                string userData = File.ReadAllText(UserFileUtil.CURRENT_USER_DATA_PATH);
+                string[] splittedData = userData.Split(' ');
+                UsernameLabel.Text = splittedData[0];
+                NameLabel.Text = splittedData[1];
+                SurnameLabel.Text = splittedData[2];
+            }
+
         }
 
         private void CurrentUserInfo_Load(object sender, EventArgs e)

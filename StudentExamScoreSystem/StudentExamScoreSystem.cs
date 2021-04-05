@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
 using System.Drawing;
+using System.Threading;
 
 namespace StudentExamScoreSystem
 {
@@ -34,10 +35,17 @@ namespace StudentExamScoreSystem
 
 
 		public StudentExamScoreSys()
-		{
+        {
+            Thread trd = new Thread(new ThreadStart(RunLoadingScreen));
+            trd.Start();
+            Thread.Sleep(12000);
 			InitializeComponent();
+            trd.Abort();
+        }
+		private void RunLoadingScreen()
+		{
+			Application.Run(new LoadingScreen());
 		}
-
 
 		private void InitializeCustomFont()
         {
@@ -393,6 +401,7 @@ namespace StudentExamScoreSystem
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+			ClearUserData();
 			pfc.Dispose();
 			Application.Exit();
         }
@@ -414,7 +423,10 @@ namespace StudentExamScoreSystem
 			currentUserInfo.ShowDialog();
         }
 
-
+		private void ClearUserData()
+        {
+			UserFileUtil.ClearCurrentUserData();
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -425,6 +437,7 @@ namespace StudentExamScoreSystem
 
             if (dialogResult == DialogResult.Yes)
             {
+				ClearUserData();
 				pfc.Dispose();
 				this.Close();
 			}

@@ -12,7 +12,6 @@ namespace StudentExamScoreSystem
         private static readonly string USER_DATA_PATH = "user_data.txt";
         public static readonly string CURRENT_USER_DATA_PATH = "current_user_data.txt";
 
-
         public static List<string> GetAllUserData()
         {
             if (!File.Exists(USER_DATA_PATH))
@@ -147,6 +146,11 @@ namespace StudentExamScoreSystem
         public static void WriteCurrentUserDataToFile(string userData)
         {
             File.WriteAllText(CURRENT_USER_DATA_PATH, userData);
+        }
+        
+        public static void ClearCurrentUserData()
+        {
+            File.WriteAllText(CURRENT_USER_DATA_PATH, String.Empty);
         }
     }
 }
