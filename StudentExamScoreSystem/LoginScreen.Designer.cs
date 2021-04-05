@@ -32,6 +32,9 @@ namespace StudentExamScoreSystem
         {
             this.components = new System.ComponentModel.Container();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.passwordValidatorLabel = new System.Windows.Forms.Label();
+            this.usernameValidatorLabel = new System.Windows.Forms.Label();
             this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.LoginHeaderLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
@@ -51,8 +54,8 @@ namespace StudentExamScoreSystem
             this.LoginTab = new System.Windows.Forms.Button();
             this.RegisterTab = new System.Windows.Forms.Button();
             this.Slider = new System.Windows.Forms.Panel();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.timer_slider = new System.Windows.Forms.Timer(this.components);
+            this.ExitButton = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.RegistrationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +63,9 @@ namespace StudentExamScoreSystem
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.LoginPanel.Controls.Add(this.LoginButton);
+            this.LoginPanel.Controls.Add(this.passwordValidatorLabel);
+            this.LoginPanel.Controls.Add(this.usernameValidatorLabel);
             this.LoginPanel.Controls.Add(this.ShowPasswordCheckBox);
             this.LoginPanel.Controls.Add(this.LoginHeaderLabel);
             this.LoginPanel.Controls.Add(this.passwordTextBox);
@@ -68,6 +74,42 @@ namespace StudentExamScoreSystem
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(471, 412);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(110)))), ((int)(((byte)(153)))));
+            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.Location = new System.Drawing.Point(170, 376);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(104, 31);
+            this.LoginButton.TabIndex = 17;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // passwordValidatorLabel
+            // 
+            this.passwordValidatorLabel.AutoSize = true;
+            this.passwordValidatorLabel.ForeColor = System.Drawing.Color.Red;
+            this.passwordValidatorLabel.Location = new System.Drawing.Point(97, 168);
+            this.passwordValidatorLabel.Name = "passwordValidatorLabel";
+            this.passwordValidatorLabel.Size = new System.Drawing.Size(35, 13);
+            this.passwordValidatorLabel.TabIndex = 16;
+            this.passwordValidatorLabel.Text = "label1";
+            // 
+            // usernameValidatorLabel
+            // 
+            this.usernameValidatorLabel.AutoSize = true;
+            this.usernameValidatorLabel.ForeColor = System.Drawing.Color.Red;
+            this.usernameValidatorLabel.Location = new System.Drawing.Point(97, 126);
+            this.usernameValidatorLabel.Name = "usernameValidatorLabel";
+            this.usernameValidatorLabel.Size = new System.Drawing.Size(35, 13);
+            this.usernameValidatorLabel.TabIndex = 15;
+            this.usernameValidatorLabel.Text = "label1";
             // 
             // ShowPasswordCheckBox
             // 
@@ -103,6 +145,7 @@ namespace StudentExamScoreSystem
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(221, 26);
             this.passwordTextBox.TabIndex = 6;
+            this.passwordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginProcessKeyDown);
             // 
             // userNameTextBox
             // 
@@ -114,6 +157,7 @@ namespace StudentExamScoreSystem
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(221, 26);
             this.userNameTextBox.TabIndex = 4;
+            this.userNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginProcessKeyDown);
             // 
             // RegistrationPanel
             // 
@@ -201,6 +245,7 @@ namespace StudentExamScoreSystem
             this.SurnameTextBox.Name = "SurnameTextBox";
             this.SurnameTextBox.Size = new System.Drawing.Size(251, 26);
             this.SurnameTextBox.TabIndex = 11;
+            this.SurnameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
             // 
             // NameTextBox
             // 
@@ -212,6 +257,7 @@ namespace StudentExamScoreSystem
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(251, 26);
             this.NameTextBox.TabIndex = 10;
+            this.NameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
             // 
             // RegistrationLabelHeader
             // 
@@ -234,6 +280,7 @@ namespace StudentExamScoreSystem
             this.confirmTextBox.Name = "confirmTextBox";
             this.confirmTextBox.Size = new System.Drawing.Size(251, 26);
             this.confirmTextBox.TabIndex = 14;
+            this.confirmTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
             // 
             // registerPasswordTextBox
             // 
@@ -245,6 +292,7 @@ namespace StudentExamScoreSystem
             this.registerPasswordTextBox.Name = "registerPasswordTextBox";
             this.registerPasswordTextBox.Size = new System.Drawing.Size(251, 26);
             this.registerPasswordTextBox.TabIndex = 13;
+            this.registerPasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
             // 
             // registerUserNameTextBox
             // 
@@ -256,6 +304,7 @@ namespace StudentExamScoreSystem
             this.registerUserNameTextBox.Name = "registerUserNameTextBox";
             this.registerUserNameTextBox.Size = new System.Drawing.Size(251, 26);
             this.registerUserNameTextBox.TabIndex = 12;
+            this.registerUserNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
             // 
             // LoginTab
             // 
@@ -295,6 +344,11 @@ namespace StudentExamScoreSystem
             this.Slider.Size = new System.Drawing.Size(235, 4);
             this.Slider.TabIndex = 12;
             // 
+            // timer_slider
+            // 
+            this.timer_slider.Interval = 5;
+            this.timer_slider.Tick += new System.EventHandler(this.timer_slider_Tick);
+            // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(60)))));
@@ -308,13 +362,6 @@ namespace StudentExamScoreSystem
             this.ExitButton.TabIndex = 13;
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            this.ExitButton.MouseEnter += new System.EventHandler(this.ExitButton_MouseEnter);
-            this.ExitButton.MouseLeave += new System.EventHandler(this.ExitButton_MouseLeave);
-            // 
-            // timer_slider
-            // 
-            this.timer_slider.Interval = 5;
-            this.timer_slider.Tick += new System.EventHandler(this.timer_slider_Tick);
             // 
             // LoginScreen
             // 
@@ -322,16 +369,17 @@ namespace StudentExamScoreSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(51)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(488, 519);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.Slider);
             this.Controls.Add(this.RegisterTab);
             this.Controls.Add(this.LoginTab);
-            this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.RegistrationPanel);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.RegistrationPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginScreen";
             this.Text = "LoginScreen";
             this.Load += new System.EventHandler(this.LoginScreen_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginScreen_MouseDown);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             this.RegistrationPanel.ResumeLayout(false);
@@ -360,11 +408,14 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.TextBox SurnameTextBox;
         private System.Windows.Forms.Panel Slider;
         private System.Windows.Forms.Button RegisterUserButton;
-        private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Timer timer_slider;
         private System.Windows.Forms.Label surnameValidatorLabel;
         private System.Windows.Forms.Label nameValidatorLabel;
         private System.Windows.Forms.Label registerUserNameValidatorLabel;
         private System.Windows.Forms.Label registerPasswordValidatorLabel;
+        private System.Windows.Forms.Label passwordValidatorLabel;
+        private System.Windows.Forms.Label usernameValidatorLabel;
+        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

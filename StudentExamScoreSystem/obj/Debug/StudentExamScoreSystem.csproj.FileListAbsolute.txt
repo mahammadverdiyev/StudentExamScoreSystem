@@ -19,3 +19,4 @@ C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj
 C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.exe
 C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.pdb
 C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.csprojAssemblyReference.cache
+C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.CurrentUserInfo.resources

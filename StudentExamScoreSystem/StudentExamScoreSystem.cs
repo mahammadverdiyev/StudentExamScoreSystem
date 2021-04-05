@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace StudentExamScoreSystem
 {
 	public partial class StudentExamScoreSys : Form
 	{
 		private List<IStudent> students;
-
+		private CurrentUserInfo currentUserInfo;
 		private InputValidator inputValidator;
 
 		public Label NameValidatorLabel => nameValidatorLabel;
@@ -20,6 +21,16 @@ namespace StudentExamScoreSystem
 		public TextBox SurnameTextbox => surnameTextBox;
 		public ComboBox CourseComboBox => courseComboBox;
 
+		public const int WM_NCLBUTTONDOWN = 0xA1;
+		public const int HT_CAPTION = 0x2;
+
+		[DllImportAttribute("user32.dll")]
+		public static extern int SendMessage(IntPtr hWnd,
+						 int Msg, int wParam, int lParam);
+		[DllImportAttribute("user32.dll")]
+		public static extern bool ReleaseCapture();
+
+
 		public StudentExamScoreSys()
 		{
 			InitializeComponent();
@@ -27,10 +38,15 @@ namespace StudentExamScoreSystem
 
 		private void StudentExamScoreSystem_Load(object sender, EventArgs e)
 		{
+			this.WindowState = FormWindowState.Minimized;
+			this.WindowState = FormWindowState.Normal;
+			this.Focus(); this.Show();
+
+
 			students = new List<IStudent>();
 			inputValidator = new InputValidator(this);
-
-            //this.MaximumSize = new System.Drawing.Size(1233, 585);
+            
+			//this.MaximumSize = new System.Drawing.Size(1233, 585);
 
             ResetLabels();
 
@@ -140,10 +156,7 @@ namespace StudentExamScoreSystem
 				return;
             }
 
-			string selectedSortingTypeInString =
-				string.Join("", sortStudentsComboBox.SelectedItem.ToString().Split(' '));
-
-            Console.WriteLine(selectedSortingTypeInString);
+			string selectedSortingTypeInString = (string) sortStudentsComboBox.SelectedItem;
 
 			SortingParameterFactory.SortingType selectedSortingType = (SortingParameterFactory.SortingType)Enum.Parse(
 				typeof(SortingParameterFactory.SortingType),
@@ -348,5 +361,35 @@ namespace StudentExamScoreSystem
 
         }
 
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+			if (e.Button == MouseButtons.Left && e.Clicks == 1)
+			{
+				ReleaseCapture();
+				SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+			}
+		}
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+			Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			this.WindowState = FormWindowState.Minimized;
+		}
+
+
+        private void InitializeCurrentUserInfo()
+        {
+			currentUserInfo = new CurrentUserInfo();
+        }
+
+		private void UserInfoButton_Click(object sender, EventArgs e)
+        {
+			InitializeCurrentUserInfo();
+			currentUserInfo.ShowDialog();
+        }
     }
 }

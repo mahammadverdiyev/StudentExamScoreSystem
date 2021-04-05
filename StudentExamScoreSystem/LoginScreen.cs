@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace StudentExamScoreSystem
 {
@@ -17,7 +14,9 @@ namespace StudentExamScoreSystem
         {
             InitializeComponent();
         }
+        int currentTabIndex = 0;
         RegistrationValidator registrationValidator;
+        LoginValidator loginValidator;
         int sliderDisplacement = 28;
         bool isUsernameActive = true;
         bool isPasswordActive = true;
@@ -29,11 +28,14 @@ namespace StudentExamScoreSystem
         
         Color grayColor = Color.FromArgb(149, 156, 161);
 
+        StudentExamScoreSys system;
 
         public Label NameValidatorLabel => nameValidatorLabel;
         public Label SurnameValidatorLabel => surnameValidatorLabel;
         public Label RegisterUserNameValidatorLabel => registerUserNameValidatorLabel;
         public Label RegisterPasswordValidatorLabel => registerPasswordValidatorLabel;
+        public Label UsernameValidatorLabel => this.usernameValidatorLabel;
+        public Label PasswordValidatorLabel => this.passwordValidatorLabel;
 
         public TextBox _NameTextBox => this.NameTextBox;
         public TextBox _SurnameTextBox => this.SurnameTextBox;
@@ -41,6 +43,19 @@ namespace StudentExamScoreSystem
         public TextBox RPasswordTextBox => this.registerPasswordTextBox;
         public TextBox ConfirmTextBox => this.confirmTextBox;
 
+        public TextBox UsernameTextBox => this.userNameTextBox;
+        public TextBox PasswordTextBox => this.passwordTextBox;
+
+
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         public void InitializeFocus()
         {
@@ -233,6 +248,8 @@ namespace StudentExamScoreSystem
 
         private void ResetLabels()
         {
+            usernameValidatorLabel.Text = "";
+            passwordValidatorLabel.Text = "";
             nameValidatorLabel.Text = "";
             surnameValidatorLabel.Text = "";
             registerUserNameValidatorLabel.Text = "";
@@ -244,26 +261,34 @@ namespace StudentExamScoreSystem
             ResetLabels();
             InitializeFocus();
             registrationValidator = new RegistrationValidator(this);
+            loginValidator = new LoginValidator(this);
         }
 
         private void LoginTab_Click(object sender, EventArgs e)
         {
-            //Slider.Location = new Point(7, 95);
-            timer_slider.Start();
-            RegisterTab.BackColor = Color.FromArgb(59, 102, 128);
-            LoginTab.BackColor = Color.FromArgb(23, 117, 173);
-            LoginPanel.Show();
-            RegistrationPanel.Hide();
+            if(currentTabIndex == 1)
+            {
+                timer_slider.Start();
+                RegisterTab.BackColor = Color.FromArgb(59, 102, 128);
+                LoginTab.BackColor = Color.FromArgb(23, 117, 173);
+                LoginPanel.Show();
+                RegistrationPanel.Hide();
+                currentTabIndex = 0;
+            }
+
         }
 
         private void RegisterTab_Click(object sender, EventArgs e)
         {
-            //Slider.Location = new Point(243, 95);
-            timer_slider.Start();
-            LoginTab.BackColor = Color.FromArgb(59, 102, 128);
-            RegisterTab.BackColor = Color.FromArgb(23, 117, 173);
-            RegistrationPanel.Show();
-            LoginPanel.Hide();
+            if(currentTabIndex == 0)
+            {
+                timer_slider.Start();
+                LoginTab.BackColor = Color.FromArgb(59, 102, 128);
+                RegisterTab.BackColor = Color.FromArgb(23, 117, 173);
+                RegistrationPanel.Show();
+                LoginPanel.Hide();
+                currentTabIndex = 1;
+            }
         }
 
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -277,17 +302,6 @@ namespace StudentExamScoreSystem
                 passwordTextBox.PasswordChar = '•';
             }
         }
-
-        private void ExitButton_MouseEnter(object sender, EventArgs e)
-        {
-            ExitButton.BackColor = Color.FromArgb(179, 71, 71);
-        }
-
-        private void ExitButton_MouseLeave(object sender, EventArgs e)
-        {
-            ExitButton.BackColor = Color.FromArgb(32, 51, 60);
-        }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -339,18 +353,90 @@ namespace StudentExamScoreSystem
             allUserData.Insert(index, line);
         }
 
-        private void RegisterUserButton_Click(object sender, EventArgs e)
+        private void InitializeSystem()
+        {
+            system = new StudentExamScoreSys();
+        }
+
+        private void StartSystem()
+        {
+            InitializeSystem();
+            this.Hide();
+            system.Show();
+        }
+
+        private void StartRegistrationProcess()
         {
             bool canAccess = registrationValidator.AreAllInputsValid();
             if (canAccess)
             {
                 List<string> allUserData = UserFileUtil.GetAllUserData();
                 AddNewUser(allUserData);
-                UserFileUtil.EncryptAllDataInList(allUserData);
-                MessageBox.Show("Successfully registered!");
+
+
+                string encryptedData =
+                    UserFileUtil.EncryptAllDataInList(allUserData);
+
+                UserFileUtil.WriteEncryptedDataToFile(encryptedData);
+
+                string currentUserData = UserFileUtil
+                                           .GetUserData(RUsernameTextBox.Text.Trim(), false);
+
+                UserFileUtil.WriteCurrentUserDataToFile(currentUserData);
+
+                StartSystem();
             }
         }
 
+        private void RegisterUserButton_Click(object sender, EventArgs e)
+        {
+            StartRegistrationProcess();
+        }
+
+        private void StartLoginProcess()
+        {
+            bool canAccess = loginValidator.AreAllInputsValid();
+            if (canAccess)
+            {
+                string userData =
+                            UserFileUtil.GetUserData(userNameTextBox.Text.Trim(), false);
+
+                UserFileUtil.WriteCurrentUserDataToFile(userData);
+                StartSystem();
+            }
+        }
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            StartLoginProcess();
+        }
+
+        private void LoginScreen_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && e.Clicks == 1)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void RegisterProcessKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                StartRegistrationProcess();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+        private void LoginProcessKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                StartLoginProcess();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentExamScoreSystem
 {
@@ -91,9 +88,7 @@ namespace StudentExamScoreSystem
                 return false;
             }
             
-            List<string> allUserData = UserFileUtil.GetAllUserData();
-
-            bool userExists = UsernameExists(allUserData, username);
+            bool userExists = UserFileUtil.UsernameExists(username);
 
             if (userExists)
             {
@@ -103,17 +98,6 @@ namespace StudentExamScoreSystem
 
             screen.RegisterUserNameValidatorLabel.Text = "";
             return true;
-        }
-        private bool UsernameExists(List<string> lines, string username)
-        {
-
-            foreach (string line in lines)
-            {
-                string[] splitted = line.Split(' ');
-                if (splitted[0].Equals(username))
-                    return true;
-            }
-            return false;
         }
 
         private bool PasswordInputIsValid()

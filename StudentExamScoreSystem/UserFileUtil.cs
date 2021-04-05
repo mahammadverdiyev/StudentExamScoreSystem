@@ -8,9 +8,10 @@ namespace StudentExamScoreSystem
 {
     class UserFileUtil
     {
-        private static readonly string PASSWORD = "mahammad";
-
+        private static readonly string PASSWORD = "Star Gazers";
         private static readonly string USER_DATA_PATH = "user_data.txt";
+        public static readonly string CURRENT_USER_DATA_PATH = "current_user_data.txt";
+
 
         public static List<string> GetAllUserData()
         {
@@ -27,7 +28,6 @@ namespace StudentExamScoreSystem
                 
                 return new List<string>(); 
             }
-            var info = new FileInfo(USER_DATA_PATH);
             
             if(new FileInfo(USER_DATA_PATH).Length == 0)
             {
@@ -71,7 +71,7 @@ namespace StudentExamScoreSystem
             EncryptAllDataInList(GetAllUserData());
         }
 
-        public static void EncryptAllDataInList(List<string> data)
+        public static string EncryptAllDataInList(List<string> data)
         {
             StringBuilder sb = new StringBuilder();
             foreach (string line in data)
@@ -80,7 +80,73 @@ namespace StudentExamScoreSystem
                 sb.Append(Environment.NewLine);
             }
             string encryptedData = Encryptor.Encrypt(sb.ToString(), PASSWORD);
+
+            return encryptedData;
+        }
+
+        public static void WriteEncryptedDataToFile(string encryptedData)
+        {
             File.WriteAllText(USER_DATA_PATH, encryptedData);
+        }
+
+        public static bool UsernameExists(string username)
+        {
+            List<string> allUserData = GetAllUserData();
+            return UsernameExists(allUserData, username);
+        }
+
+        private static bool UsernameExists(List<string> lines, string username)
+        {
+
+            foreach (string line in lines)
+            {
+                string[] splitted = line.Split(' ');
+                if (splitted[0].Equals(username))
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool UsernamePasswordMatches(string username,string password)
+        {
+            List<string> lines = GetAllUserData();
+            foreach (string line in lines)
+            {
+                string[] splitted = line.Split(' ');
+                string uName = splitted[0];
+                
+                if (uName.Equals(username))
+                {
+                    string passwordInFile = splitted[3];
+                    if (passwordInFile.Equals(password))
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public static string GetUserData(string username,bool includePassword)
+        {
+            List<string> lines = GetAllUserData();
+            foreach (string line in lines)
+            {
+                string[] splitted = line.Split(' ');
+                string uName = splitted[0];
+
+                if (uName.Equals(username))
+                {
+                    if (includePassword)
+                        return line;
+                    else
+                        return $"{splitted[0]} {splitted[1]} {splitted[2]}";
+                }
+            }
+            return null;
+        }
+
+        public static void WriteCurrentUserDataToFile(string userData)
+        {
+            File.WriteAllText(CURRENT_USER_DATA_PATH, userData);
         }
     }
 }
