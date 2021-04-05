@@ -87,12 +87,12 @@ namespace StudentExamScoreSystem
             this.sdf2NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.sdf1NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label_validate_does_exist = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UserInfoButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.UserInfoButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.panel_console.SuspendLayout();
             this.findStudentPanel.SuspendLayout();
             this.sortPanel.SuspendLayout();
@@ -101,8 +101,8 @@ namespace StudentExamScoreSystem
             ((System.ComponentModel.ISupportInitialize)(this.sdf3NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sdf2NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sdf1NumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // consoleTextBox
@@ -820,17 +820,6 @@ namespace StudentExamScoreSystem
             this.label_validate_does_exist.TabIndex = 30;
             this.label_validate_does_exist.Text = "label1";
             // 
-            // logo
-            // 
-            this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(83, 0);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(163, 47);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 0;
-            this.logo.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
@@ -843,21 +832,6 @@ namespace StudentExamScoreSystem
             this.panel1.Size = new System.Drawing.Size(1193, 31);
             this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // UserInfoButton
-            // 
-            this.UserInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.UserInfoButton.FlatAppearance.BorderSize = 0;
-            this.UserInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserInfoButton.ForeColor = System.Drawing.Color.White;
-            this.UserInfoButton.Image = global::StudentExamScoreSystem.Properties.Resources.userpic;
-            this.UserInfoButton.Location = new System.Drawing.Point(1010, 0);
-            this.UserInfoButton.Name = "UserInfoButton";
-            this.UserInfoButton.Size = new System.Drawing.Size(61, 31);
-            this.UserInfoButton.TabIndex = 16;
-            this.UserInfoButton.UseVisualStyleBackColor = false;
-            this.UserInfoButton.Click += new System.EventHandler(this.UserInfoButton_Click);
             // 
             // button1
             // 
@@ -874,20 +848,6 @@ namespace StudentExamScoreSystem
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ExitButton
-            // 
-            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.ExitButton.FlatAppearance.BorderSize = 0;
-            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Image = global::StudentExamScoreSystem.Properties.Resources.close;
-            this.ExitButton.Location = new System.Drawing.Point(1132, 0);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(61, 31);
-            this.ExitButton.TabIndex = 14;
-            this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
@@ -902,6 +862,46 @@ namespace StudentExamScoreSystem
             this.button2.TabIndex = 17;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // UserInfoButton
+            // 
+            this.UserInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.UserInfoButton.FlatAppearance.BorderSize = 0;
+            this.UserInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserInfoButton.ForeColor = System.Drawing.Color.White;
+            this.UserInfoButton.Image = global::StudentExamScoreSystem.Properties.Resources.userpic;
+            this.UserInfoButton.Location = new System.Drawing.Point(1010, 0);
+            this.UserInfoButton.Name = "UserInfoButton";
+            this.UserInfoButton.Size = new System.Drawing.Size(61, 31);
+            this.UserInfoButton.TabIndex = 16;
+            this.UserInfoButton.UseVisualStyleBackColor = false;
+            this.UserInfoButton.Click += new System.EventHandler(this.UserInfoButton_Click);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.Image = global::StudentExamScoreSystem.Properties.Resources.close;
+            this.ExitButton.Location = new System.Drawing.Point(1132, 0);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(61, 31);
+            this.ExitButton.TabIndex = 14;
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // logo
+            // 
+            this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(83, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(163, 47);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 0;
+            this.logo.TabStop = false;
             // 
             // StudentExamScoreSys
             // 
@@ -930,8 +930,8 @@ namespace StudentExamScoreSystem
             ((System.ComponentModel.ISupportInitialize)(this.sdf3NumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sdf2NumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sdf1NumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
 		}

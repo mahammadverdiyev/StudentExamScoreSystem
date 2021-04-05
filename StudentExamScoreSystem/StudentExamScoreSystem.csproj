@@ -55,11 +55,11 @@
     <Compile Include="Decryptor.cs" />
     <Compile Include="Encryptor.cs" />
     <Compile Include="ExamScore.cs" />
-    <Compile Include="LoadingCircle.cs">
-      <SubType>Component</SubType>
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoadingCircle.Designer.cs">
-      <DependentUpon>LoadingCircle.cs</DependentUpon>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginValidator.cs" />
     <Compile Include="StudentFileUtil.cs" />
@@ -86,6 +86,9 @@
     <Compile Include="UserFileUtil.cs" />
     <EmbeddedResource Include="CurrentUserInfo.resx">
       <DependentUpon>CurrentUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
@@ -131,6 +134,33 @@
   <ItemGroup>
     <None Include="Resources\Meslo LG M.ttf" />
     <None Include="Resources\userpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stargazersmedium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stargazersfacebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\githubpicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workpic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

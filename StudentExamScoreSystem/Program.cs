@@ -15,6 +15,7 @@ namespace StudentExamScoreSystem
             //Application.Run(new CurrentUserInfo());
             //Application.Run(new StudentExamScoreSys());
             Application.Run(new LoginScreen());
+            //Application.Run(new LoadingScreen());
             //PrintAllUserData();
 
         }
