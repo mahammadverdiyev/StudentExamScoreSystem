@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Drawing.Text;
+using System.Drawing;
 
 namespace StudentExamScoreSystem
 {
@@ -36,8 +38,27 @@ namespace StudentExamScoreSystem
 			InitializeComponent();
 		}
 
+
+		private void InitializeCustomFont()
+        {
+			PrivateFontCollection pfc = new PrivateFontCollection();
+
+			int fontLength = Properties.Resources.Meslo_LG_M.Length;
+
+			byte[] fontdata = Properties.Resources.Meslo_LG_M;
+
+			System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+
+			Marshal.Copy(fontdata, 0, data, fontLength);
+
+			pfc.AddMemoryFont(data, fontLength);
+
+			consoleTextBox.Font = new Font(pfc.Families[0], consoleTextBox.Font.Size);
+		}
 		private void StudentExamScoreSystem_Load(object sender, EventArgs e)
 		{
+
+			InitializeCustomFont();
 			this.WindowState = FormWindowState.Minimized;
 			this.WindowState = FormWindowState.Normal;
 			this.Focus(); this.Show();
@@ -391,5 +412,21 @@ namespace StudentExamScoreSystem
 			InitializeCurrentUserInfo();
 			currentUserInfo.ShowDialog();
         }
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+			string dialogMessage =
+				"Are you sure you want to sign out ?";
+
+			DialogResult dialogResult = MessageBox.Show(dialogMessage, "Sign out", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+				this.Close();
+			}
+
+		}
     }
 }

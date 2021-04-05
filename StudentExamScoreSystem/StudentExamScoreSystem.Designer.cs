@@ -29,6 +29,7 @@ namespace StudentExamScoreSystem
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentExamScoreSys));
             this.consoleTextBox = new System.Windows.Forms.TextBox();
             this.ShowAllButton = new System.Windows.Forms.Button();
             this.panel_console = new System.Windows.Forms.Panel();
@@ -91,6 +92,7 @@ namespace StudentExamScoreSystem
             this.UserInfoButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel_console.SuspendLayout();
             this.findStudentPanel.SuspendLayout();
             this.sortPanel.SuspendLayout();
@@ -107,7 +109,7 @@ namespace StudentExamScoreSystem
             // 
             this.consoleTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
             this.consoleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.consoleTextBox.Font = new System.Drawing.Font("Meslo LG M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consoleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consoleTextBox.ForeColor = System.Drawing.Color.White;
             this.consoleTextBox.Location = new System.Drawing.Point(8, 8);
             this.consoleTextBox.Multiline = true;
@@ -821,7 +823,7 @@ namespace StudentExamScoreSystem
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.logo.Image = global::StudentExamScoreSystem.Properties.Resources.beu1;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(83, 0);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(163, 47);
@@ -832,6 +834,7 @@ namespace StudentExamScoreSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.UserInfoButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.ExitButton);
@@ -884,6 +887,21 @@ namespace StudentExamScoreSystem
             this.ExitButton.TabIndex = 14;
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(949, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(61, 31);
+            this.button2.TabIndex = 17;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // StudentExamScoreSys
             // 
@@ -981,6 +999,7 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button UserInfoButton;
+        private System.Windows.Forms.Button button2;
     }
 }
 

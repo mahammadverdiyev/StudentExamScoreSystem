@@ -353,9 +353,25 @@ namespace StudentExamScoreSystem
             allUserData.Insert(index, line);
         }
 
+        private void ClearAllInputs()
+        {
+            userNameTextBox.Clear();
+            passwordTextBox.Clear();
+            NameTextBox.Clear();
+            SurnameTextBox.Clear();
+            registerUserNameTextBox.Clear();
+            registerPasswordTextBox.Clear();
+            confirmTextBox.Clear();
+        }
+
         private void InitializeSystem()
         {
             system = new StudentExamScoreSys();
+            system.FormClosed += delegate
+            {
+                this.Show();
+                ClearAllInputs();
+            };
         }
 
         private void StartSystem()
