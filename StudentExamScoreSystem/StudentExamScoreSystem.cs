@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Drawing.Text;
 using System.Drawing;
-using System.Threading;
 
 namespace StudentExamScoreSystem
 {
@@ -36,17 +35,8 @@ namespace StudentExamScoreSystem
 
 		public StudentExamScoreSys()
         {
-            //Thread trd = new Thread(new ThreadStart(RunLoadingScreen));
-            //         trd.Start();
-            //         Thread.Sleep(12000);
             InitializeComponent();
-            //trd.Abort();
         }
-
-		private void RunLoadingScreen()
-		{
-			Application.Run(new LoadingScreen());
-		}
 
 		private void InitializeCustomFont()
         {
@@ -68,17 +58,12 @@ namespace StudentExamScoreSystem
 		{
 
 			InitializeCustomFont();
-			this.WindowState = FormWindowState.Minimized;
-			this.WindowState = FormWindowState.Normal;
-			this.Focus(); 
-			//this.Show();
+			//this.Focus();
+            //this.Show();
 
-
-			students = new List<IStudent>();
+            students = new List<IStudent>();
 			inputValidator = new InputValidator(this);
             
-			//this.MaximumSize = new System.Drawing.Size(1233, 585);
-
             ResetLabels();
 
 			students.Add(new BEUStudent("Mahammad", "Verdiyev", 2, 456465, new ExamScore(53, 87, 69, 74)));

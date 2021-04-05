@@ -103,7 +103,7 @@ namespace StudentExamScoreSystem
             // 
             // screenCloseTimer
             // 
-            this.screenCloseTimer.Interval = 12000;
+            this.screenCloseTimer.Interval = 8000;
             this.screenCloseTimer.Tick += new System.EventHandler(this.screenCloseTimer_Tick);
             // 
             // LoadingScreen
