@@ -69,7 +69,7 @@ namespace StudentExamScoreSystem
             // 
             // pictureAnimationInvoker
             // 
-            this.pictureAnimationInvoker.Interval = 5000;
+            this.pictureAnimationInvoker.Interval = 3000;
             this.pictureAnimationInvoker.Tick += new System.EventHandler(this.pictureAnimationInvoker_Tick);
             // 
             // slideAnimationTimer

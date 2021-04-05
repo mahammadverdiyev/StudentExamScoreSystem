@@ -104,7 +104,9 @@ namespace StudentExamScoreSystem
 
         private void screenCloseTimer_Tick(object sender, EventArgs e)
         {
+
             system.Show();
+            this.Dispose();
             this.Close();
         }
     }
