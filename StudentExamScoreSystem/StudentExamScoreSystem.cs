@@ -15,7 +15,7 @@ namespace StudentExamScoreSystem
 		private List<IStudent> students;
 		private CurrentUserInfo currentUserInfo;
 		private InputValidator inputValidator;
-
+		private PrivateFontCollection pfc;
 		public Label NameValidatorLabel => nameValidatorLabel;
 		public Label SurnameValidatorLabel => surnameValidatorLabel;
 		public Label CourseValidaterLabel => courseValidatorLabel;
@@ -41,13 +41,13 @@ namespace StudentExamScoreSystem
 
 		private void InitializeCustomFont()
         {
-			PrivateFontCollection pfc = new PrivateFontCollection();
+			pfc = new PrivateFontCollection();
 
 			int fontLength = Properties.Resources.Meslo_LG_M.Length;
 
 			byte[] fontdata = Properties.Resources.Meslo_LG_M;
 
-			System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+			IntPtr data = Marshal.AllocCoTaskMem(fontLength);
 
 			Marshal.Copy(fontdata, 0, data, fontLength);
 
@@ -393,6 +393,7 @@ namespace StudentExamScoreSystem
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+			pfc.Dispose();
 			Application.Exit();
         }
 
@@ -424,6 +425,7 @@ namespace StudentExamScoreSystem
 
             if (dialogResult == DialogResult.Yes)
             {
+				pfc.Dispose();
 				this.Close();
 			}
 

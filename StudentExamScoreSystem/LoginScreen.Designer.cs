@@ -56,6 +56,12 @@ namespace StudentExamScoreSystem
             this.Slider = new System.Windows.Forms.Panel();
             this.timer_slider = new System.Windows.Forms.Timer(this.components);
             this.ExitButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.LoginPanel.SuspendLayout();
             this.RegistrationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +69,8 @@ namespace StudentExamScoreSystem
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.LoginPanel.Controls.Add(this.label6);
+            this.LoginPanel.Controls.Add(this.label5);
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.Controls.Add(this.passwordValidatorLabel);
             this.LoginPanel.Controls.Add(this.usernameValidatorLabel);
@@ -95,7 +103,7 @@ namespace StudentExamScoreSystem
             // 
             this.passwordValidatorLabel.AutoSize = true;
             this.passwordValidatorLabel.ForeColor = System.Drawing.Color.Red;
-            this.passwordValidatorLabel.Location = new System.Drawing.Point(97, 168);
+            this.passwordValidatorLabel.Location = new System.Drawing.Point(97, 191);
             this.passwordValidatorLabel.Name = "passwordValidatorLabel";
             this.passwordValidatorLabel.Size = new System.Drawing.Size(35, 13);
             this.passwordValidatorLabel.TabIndex = 16;
@@ -116,7 +124,7 @@ namespace StudentExamScoreSystem
             this.ShowPasswordCheckBox.AutoSize = true;
             this.ShowPasswordCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.White;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(100, 184);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(100, 207);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(122, 20);
             this.ShowPasswordCheckBox.TabIndex = 9;
@@ -141,8 +149,9 @@ namespace StudentExamScoreSystem
             this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.ForeColor = System.Drawing.Color.White;
-            this.passwordTextBox.Location = new System.Drawing.Point(100, 143);
+            this.passwordTextBox.Location = new System.Drawing.Point(100, 166);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '•';
             this.passwordTextBox.Size = new System.Drawing.Size(221, 26);
             this.passwordTextBox.TabIndex = 6;
             this.passwordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginProcessKeyDown);
@@ -162,6 +171,10 @@ namespace StudentExamScoreSystem
             // RegistrationPanel
             // 
             this.RegistrationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.RegistrationPanel.Controls.Add(this.label4);
+            this.RegistrationPanel.Controls.Add(this.label3);
+            this.RegistrationPanel.Controls.Add(this.label2);
+            this.RegistrationPanel.Controls.Add(this.label1);
             this.RegistrationPanel.Controls.Add(this.registerPasswordValidatorLabel);
             this.RegistrationPanel.Controls.Add(this.registerUserNameValidatorLabel);
             this.RegistrationPanel.Controls.Add(this.surnameValidatorLabel);
@@ -183,7 +196,7 @@ namespace StudentExamScoreSystem
             // 
             this.registerPasswordValidatorLabel.AutoSize = true;
             this.registerPasswordValidatorLabel.ForeColor = System.Drawing.Color.Red;
-            this.registerPasswordValidatorLabel.Location = new System.Drawing.Point(97, 342);
+            this.registerPasswordValidatorLabel.Location = new System.Drawing.Point(97, 363);
             this.registerPasswordValidatorLabel.Name = "registerPasswordValidatorLabel";
             this.registerPasswordValidatorLabel.Size = new System.Drawing.Size(35, 13);
             this.registerPasswordValidatorLabel.TabIndex = 17;
@@ -193,7 +206,7 @@ namespace StudentExamScoreSystem
             // 
             this.registerUserNameValidatorLabel.AutoSize = true;
             this.registerUserNameValidatorLabel.ForeColor = System.Drawing.Color.Red;
-            this.registerUserNameValidatorLabel.Location = new System.Drawing.Point(97, 242);
+            this.registerUserNameValidatorLabel.Location = new System.Drawing.Point(97, 266);
             this.registerUserNameValidatorLabel.Name = "registerUserNameValidatorLabel";
             this.registerUserNameValidatorLabel.Size = new System.Drawing.Size(35, 13);
             this.registerUserNameValidatorLabel.TabIndex = 16;
@@ -203,7 +216,7 @@ namespace StudentExamScoreSystem
             // 
             this.surnameValidatorLabel.AutoSize = true;
             this.surnameValidatorLabel.ForeColor = System.Drawing.Color.Red;
-            this.surnameValidatorLabel.Location = new System.Drawing.Point(97, 168);
+            this.surnameValidatorLabel.Location = new System.Drawing.Point(97, 197);
             this.surnameValidatorLabel.Name = "surnameValidatorLabel";
             this.surnameValidatorLabel.Size = new System.Drawing.Size(35, 13);
             this.surnameValidatorLabel.TabIndex = 15;
@@ -241,7 +254,7 @@ namespace StudentExamScoreSystem
             this.SurnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SurnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SurnameTextBox.ForeColor = System.Drawing.Color.White;
-            this.SurnameTextBox.Location = new System.Drawing.Point(100, 143);
+            this.SurnameTextBox.Location = new System.Drawing.Point(100, 168);
             this.SurnameTextBox.Name = "SurnameTextBox";
             this.SurnameTextBox.Size = new System.Drawing.Size(251, 26);
             this.SurnameTextBox.TabIndex = 11;
@@ -276,8 +289,9 @@ namespace StudentExamScoreSystem
             this.confirmTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.confirmTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmTextBox.ForeColor = System.Drawing.Color.White;
-            this.confirmTextBox.Location = new System.Drawing.Point(100, 313);
+            this.confirmTextBox.Location = new System.Drawing.Point(100, 334);
             this.confirmTextBox.Name = "confirmTextBox";
+            this.confirmTextBox.PasswordChar = '•';
             this.confirmTextBox.Size = new System.Drawing.Size(251, 26);
             this.confirmTextBox.TabIndex = 14;
             this.confirmTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
@@ -288,8 +302,9 @@ namespace StudentExamScoreSystem
             this.registerPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.registerPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerPasswordTextBox.ForeColor = System.Drawing.Color.White;
-            this.registerPasswordTextBox.Location = new System.Drawing.Point(100, 278);
+            this.registerPasswordTextBox.Location = new System.Drawing.Point(100, 302);
             this.registerPasswordTextBox.Name = "registerPasswordTextBox";
+            this.registerPasswordTextBox.PasswordChar = '•';
             this.registerPasswordTextBox.Size = new System.Drawing.Size(251, 26);
             this.registerPasswordTextBox.TabIndex = 13;
             this.registerPasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterProcessKeyDown);
@@ -300,7 +315,7 @@ namespace StudentExamScoreSystem
             this.registerUserNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.registerUserNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerUserNameTextBox.ForeColor = System.Drawing.Color.White;
-            this.registerUserNameTextBox.Location = new System.Drawing.Point(100, 213);
+            this.registerUserNameTextBox.Location = new System.Drawing.Point(100, 237);
             this.registerUserNameTextBox.Name = "registerUserNameTextBox";
             this.registerUserNameTextBox.Size = new System.Drawing.Size(251, 26);
             this.registerUserNameTextBox.TabIndex = 12;
@@ -363,6 +378,72 @@ namespace StudentExamScoreSystem
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(97, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "First Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(97, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Last Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(97, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Username";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(97, 285);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Password";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(97, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Username";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(97, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Password";
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,5 +498,11 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.Label usernameValidatorLabel;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
