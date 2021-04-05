@@ -35,7 +35,6 @@ namespace StudentExamScoreSystem
             this.pictureAnimationTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureAnimationInvoker = new System.Windows.Forms.Timer(this.components);
             this.slideAnimationTimer = new System.Windows.Forms.Timer(this.components);
-            this.SocialAccountsLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
             this.MyPicture = new System.Windows.Forms.PictureBox();
             this.ProgressBar.SuspendLayout();
@@ -74,20 +73,8 @@ namespace StudentExamScoreSystem
             // 
             // slideAnimationTimer
             // 
-            this.slideAnimationTimer.Interval = 15;
+            this.slideAnimationTimer.Interval = 20;
             this.slideAnimationTimer.Tick += new System.EventHandler(this.slideAnimationTimer_Tick);
-            // 
-            // SocialAccountsLabel
-            // 
-            this.SocialAccountsLabel.AutoSize = true;
-            this.SocialAccountsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SocialAccountsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SocialAccountsLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.SocialAccountsLabel.Location = new System.Drawing.Point(12, 456);
-            this.SocialAccountsLabel.Name = "SocialAccountsLabel";
-            this.SocialAccountsLabel.Size = new System.Drawing.Size(223, 29);
-            this.SocialAccountsLabel.TabIndex = 4;
-            this.SocialAccountsLabel.Text = "Our social accounts";
             // 
             // nextButton
             // 
@@ -121,7 +108,6 @@ namespace StudentExamScoreSystem
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(851, 528);
             this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.SocialAccountsLabel);
             this.Controls.Add(this.MyPicture);
             this.Controls.Add(this.ProgressBar);
             this.DoubleBuffered = true;
@@ -133,7 +119,6 @@ namespace StudentExamScoreSystem
             this.ProgressBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MyPicture)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,6 +130,5 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.Timer pictureAnimationInvoker;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Timer slideAnimationTimer;
-        private System.Windows.Forms.Label SocialAccountsLabel;
     }
 }

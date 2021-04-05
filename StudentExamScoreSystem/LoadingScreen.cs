@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace StudentExamScoreSystem
@@ -21,6 +20,7 @@ namespace StudentExamScoreSystem
             Properties.Resources.stargazersmedium,
             Properties.Resources.stargazersfacebook,
             Properties.Resources.github,
+            Properties.Resources.workpic,
         };
 
         public LoadingScreen()
