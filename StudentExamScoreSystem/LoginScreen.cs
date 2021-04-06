@@ -13,6 +13,7 @@ namespace StudentExamScoreSystem
         {
             InitializeComponent();
         }
+
         int currentTabIndex = 0;
         RegistrationValidator registrationValidator;
         LoginValidator loginValidator;

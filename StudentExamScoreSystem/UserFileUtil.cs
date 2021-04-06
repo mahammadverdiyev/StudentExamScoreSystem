@@ -32,7 +32,7 @@ namespace StudentExamScoreSystem
             {
                 return new List<string>();
             }
-
+            
             string encryptedData = ReadDataFromFile(USER_DATA_PATH);
 
             string decryptedData = DecryptData(encryptedData, PASSWORD);

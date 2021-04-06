@@ -918,6 +918,7 @@ namespace StudentExamScoreSystem
             this.Name = "StudentExamScoreSys";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Exam Score System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentExamScoreSys_FormClosed);
             this.Load += new System.EventHandler(this.StudentExamScoreSystem_Load);
             this.panel_console.ResumeLayout(false);
             this.panel_console.PerformLayout();

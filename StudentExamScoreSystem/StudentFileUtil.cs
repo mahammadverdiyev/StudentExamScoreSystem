@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentExamScoreSystem
 {
     class StudentFileUtil
     {
+        // don't modify
+        private static readonly string STUDENT_DATA_PATH = "student_data.txt";
 
-        public static void ReadStudentDataFromFile(string path, List<IStudent> listStudent)
+
+        public static void ReadStudentDataFromFile(List<IStudent> listStudent)
         {
-            using (StreamReader reader = new StreamReader(path))
+            using (StreamReader reader = new StreamReader(STUDENT_DATA_PATH))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
@@ -31,9 +30,9 @@ namespace StudentExamScoreSystem
                 }
             }
         }
-        public static void WriteStudentDataToFile(string path, List<IStudent> listStudent)
+        public static void WriteStudentDataToFile(List<IStudent> listStudent)
         {
-            using (StreamWriter writer = new StreamWriter(path))
+            using (StreamWriter writer = new StreamWriter(STUDENT_DATA_PATH))
             {
                 foreach(IStudent student in listStudent)
                 {

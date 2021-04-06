@@ -11,12 +11,11 @@ namespace StudentExamScoreSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginScreen());
-            //Application.Run(new LoadingScreen());
-            //PrintAllUserData();
 
+            Application.Run(new LoginScreen());
         }
 
+        
         // written for testing purpose
         public static void PrintAllUserData()
         {

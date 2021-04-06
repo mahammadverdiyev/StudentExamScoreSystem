@@ -1,5 +1,9 @@
-Mahammad Verdiyev 2 456465
-Kamil Abiyev 3 784394
-Elnur Veliyev 1 279246
-Nihad Adigozelov 4 975473
-Orxan Aslanov 1 972948
+Mahammad Verdiyev 2 456465 53 87 69 74
+Kamil Abiyev 3 784394 85 71 65 77
+Elnur Veliyev 1 279246 70 89 76 85
+Nihad Adigozelov 4 975473 66 79 73 90
+Orxan Aslanov 1 972948 63 46 70 88
+Sahil Hashimli 2 432357 92 77 80 90
+Subhan Abbasov 3 116731 50 60 60 50
+Umid Haciyev 4 113520 0 0 0 0
+Asdasd Asdasdasd 2 211403 0 0 0 0

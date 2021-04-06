@@ -58,19 +58,21 @@ namespace StudentExamScoreSystem
 		{
 
 			InitializeCustomFont();
-			//this.Focus();
-            //this.Show();
 
-            students = new List<IStudent>();
+			//this.Focus();
+			//this.Show();
+			students = new List<IStudent>();
+			StudentFileUtil.ReadStudentDataFromFile(students);
 			inputValidator = new InputValidator(this);
             
             ResetLabels();
 
-			students.Add(new BEUStudent("Mahammad", "Verdiyev", 2, 456465, new ExamScore(53, 87, 69, 74)));
-			students.Add(new BEUStudent("Kamil", "Abiyev", 3, 784394, new ExamScore(85, 71, 65, 77)));
-			students.Add(new BEUStudent("Elnur", "Veliyev", 1, 279246, new ExamScore(70, 89, 76, 85)));
-			students.Add(new BEUStudent("Nihad", "Adigozelov", 4, 975473, new ExamScore(66, 79, 73, 90)));
-			students.Add(new BEUStudent("Orxan", "Aslanov", 1, 972948, new ExamScore(63, 46, 70, 88)));
+			//students.Add(new BEUStudent("Mahammad", "Verdiyev", 2, 456465, new ExamScore(53, 87, 69, 74)));
+			//students.Add(new BEUStudent("Kamil", "Abiyev", 3, 784394, new ExamScore(85, 71, 65, 77)));
+			//students.Add(new BEUStudent("Elnur", "Veliyev", 1, 279246, new ExamScore(70, 89, 76, 85)));
+			//students.Add(new BEUStudent("Nihad", "Adigozelov", 4, 975473, new ExamScore(66, 79, 73, 90)));
+			//students.Add(new BEUStudent("Orxan", "Aslanov", 1, 972948, new ExamScore(63, 46, 70, 88)));
+
 		}
 
 		private void ResetLabels()
@@ -214,10 +216,10 @@ namespace StudentExamScoreSystem
 
 		private void WriteDefaultTextToConsole()
 		{
-			consoleTextBox.Text = string.Format("{0,-12} {1,-12} {2,-7} {3,-7} {4,-6} {5,-6} {6,-6} {7,-7} {8,7}", "NAME", "SURNAME", "COURSE", "ID", "SDF1", "SDF2", "SDF3", "FINAL", "AVERAGE");
-			consoleTextBox.AppendText(Environment.NewLine);
-			consoleTextBox.AppendText("------------------------------------------------------------------------------");
-			consoleTextBox.AppendText(Environment.NewLine);
+            consoleTextBox.Text = string.Format("{0,-12} {1,-12} {2,-7} {3,-7} {4,-6} {5,-6} {6,-6} {7,-7} {8,7}", "NAME", "SURNAME", "COURSE", "ID", "SDF1", "SDF2", "SDF3", "FINAL", "AVERAGE");
+            consoleTextBox.AppendText(Environment.NewLine);
+            consoleTextBox.AppendText("------------------------------------------------------------------------------");
+            consoleTextBox.AppendText(Environment.NewLine);
 		}
 
 		private bool HandleValueRange(int score, string op, int examResult)
@@ -388,7 +390,6 @@ namespace StudentExamScoreSystem
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-			ClearUserData();
 			pfc.Dispose();
 			Application.Exit();
         }
@@ -424,11 +425,16 @@ namespace StudentExamScoreSystem
 
             if (dialogResult == DialogResult.Yes)
             {
-				ClearUserData();
 				pfc.Dispose();
 				this.Close();
 			}
 
 		}
+
+        private void StudentExamScoreSys_FormClosed(object sender, FormClosedEventArgs e)
+        {
+			ClearUserData();
+			StudentFileUtil.WriteStudentDataToFile(students);
+        }
     }
 }
