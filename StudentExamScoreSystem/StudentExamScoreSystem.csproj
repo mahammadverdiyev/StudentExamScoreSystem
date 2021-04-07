@@ -132,7 +132,6 @@
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Meslo LG M.ttf" />
     <None Include="Resources\userpic.png" />
   </ItemGroup>
   <ItemGroup>

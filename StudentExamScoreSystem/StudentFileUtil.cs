@@ -30,9 +30,9 @@ namespace StudentExamScoreSystem
                 }
             }
         }
-        public static void WriteStudentDataToFile(List<IStudent> listStudent)
+        public static void WriteStudentDataToFile(string path,List<IStudent> listStudent)
         {
-            using (StreamWriter writer = new StreamWriter(STUDENT_DATA_PATH))
+            using (StreamWriter writer = new StreamWriter(path))
             {
                 foreach(IStudent student in listStudent)
                 {
@@ -47,6 +47,10 @@ namespace StudentExamScoreSystem
                     writer.WriteLine($"{name} {surname} {course} {id} {sdf1} {sdf2} {sdf3} {final}");
                 }
             }
+        }
+        public static void WriteStudentDataToDefaultFile(List<IStudent> listStudent)
+        {
+            WriteStudentDataToFile(STUDENT_DATA_PATH, listStudent);
         }
     }
 }

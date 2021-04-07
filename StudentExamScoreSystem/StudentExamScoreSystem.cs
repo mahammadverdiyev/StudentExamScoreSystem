@@ -5,8 +5,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using System.Drawing.Text;
-using System.Drawing;
 
 namespace StudentExamScoreSystem
 {
@@ -15,7 +13,6 @@ namespace StudentExamScoreSystem
 		private List<IStudent> students;
 		private CurrentUserInfo currentUserInfo;
 		private InputValidator inputValidator;
-		private PrivateFontCollection pfc;
 		public Label NameValidatorLabel => nameValidatorLabel;
 		public Label SurnameValidatorLabel => surnameValidatorLabel;
 		public Label CourseValidaterLabel => courseValidatorLabel;
@@ -38,41 +35,15 @@ namespace StudentExamScoreSystem
             InitializeComponent();
         }
 
-		private void InitializeCustomFont()
-        {
-			pfc = new PrivateFontCollection();
-
-			int fontLength = Properties.Resources.Meslo_LG_M.Length;
-
-			byte[] fontdata = Properties.Resources.Meslo_LG_M;
-
-			IntPtr data = Marshal.AllocCoTaskMem(fontLength);
-
-			Marshal.Copy(fontdata, 0, data, fontLength);
-
-			pfc.AddMemoryFont(data, fontLength);
-
-			consoleTextBox.Font = new Font(pfc.Families[0], consoleTextBox.Font.Size);
-		}
 		private void StudentExamScoreSystem_Load(object sender, EventArgs e)
 		{
 
-			InitializeCustomFont();
-
-			//this.Focus();
-			//this.Show();
 			students = new List<IStudent>();
 			StudentFileUtil.ReadStudentDataFromFile(students);
+
 			inputValidator = new InputValidator(this);
             
             ResetLabels();
-
-			//students.Add(new BEUStudent("Mahammad", "Verdiyev", 2, 456465, new ExamScore(53, 87, 69, 74)));
-			//students.Add(new BEUStudent("Kamil", "Abiyev", 3, 784394, new ExamScore(85, 71, 65, 77)));
-			//students.Add(new BEUStudent("Elnur", "Veliyev", 1, 279246, new ExamScore(70, 89, 76, 85)));
-			//students.Add(new BEUStudent("Nihad", "Adigozelov", 4, 975473, new ExamScore(66, 79, 73, 90)));
-			//students.Add(new BEUStudent("Orxan", "Aslanov", 1, 972948, new ExamScore(63, 46, 70, 88)));
-
 		}
 
 		private void ResetLabels()
@@ -390,7 +361,7 @@ namespace StudentExamScoreSystem
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-			pfc.Dispose();
+			//pfc.Dispose();
 			Application.Exit();
         }
 
@@ -425,7 +396,6 @@ namespace StudentExamScoreSystem
 
             if (dialogResult == DialogResult.Yes)
             {
-				pfc.Dispose();
 				this.Close();
 			}
 
@@ -434,7 +404,18 @@ namespace StudentExamScoreSystem
         private void StudentExamScoreSys_FormClosed(object sender, FormClosedEventArgs e)
         {
 			ClearUserData();
-			StudentFileUtil.WriteStudentDataToFile(students);
+			StudentFileUtil.WriteStudentDataToDefaultFile(students);
+        }
+
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+			SaveFileDialog dialog = new SaveFileDialog();
+			dialog.Filter = "Save as |*.txt";
+			
+			if(dialog.ShowDialog() == DialogResult.OK)
+            {
+				StudentFileUtil.WriteStudentDataToFile(dialog.FileName,students);
+            }
         }
     }
 }

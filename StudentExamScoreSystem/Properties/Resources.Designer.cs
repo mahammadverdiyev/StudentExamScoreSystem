@@ -101,16 +101,6 @@ namespace StudentExamScoreSystem.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Meslo_LG_M {
-            get {
-                object obj = ResourceManager.GetObject("Meslo_LG_M", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap nextBtn {
