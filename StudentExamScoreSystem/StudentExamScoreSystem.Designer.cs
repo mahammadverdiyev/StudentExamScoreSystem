@@ -61,6 +61,7 @@ namespace StudentExamScoreSystem
             this.findNameTextBox = new System.Windows.Forms.TextBox();
             this.label_find_student = new System.Windows.Forms.Label();
             this.sortPanel = new System.Windows.Forms.Panel();
+            this.ExportButton = new System.Windows.Forms.Button();
             this.button_whoisare = new System.Windows.Forms.Button();
             this.comboBox_whoisare = new System.Windows.Forms.ComboBox();
             this.label_whoisare = new System.Windows.Forms.Label();
@@ -89,11 +90,10 @@ namespace StudentExamScoreSystem
             this.label_validate_does_exist = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ButtonSignOut = new System.Windows.Forms.Button();
             this.UserInfoButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.ExportButton = new System.Windows.Forms.Button();
             this.panel_console.SuspendLayout();
             this.findStudentPanel.SuspendLayout();
             this.sortPanel.SuspendLayout();
@@ -512,6 +512,21 @@ namespace StudentExamScoreSystem
             this.sortPanel.Size = new System.Drawing.Size(463, 284);
             this.sortPanel.TabIndex = 9;
             // 
+            // ExportButton
+            // 
+            this.ExportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.ExportButton.FlatAppearance.BorderSize = 0;
+            this.ExportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExportButton.ForeColor = System.Drawing.Color.White;
+            this.ExportButton.Image = ((System.Drawing.Image)(resources.GetObject("ExportButton.Image")));
+            this.ExportButton.Location = new System.Drawing.Point(399, 3);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(61, 37);
+            this.ExportButton.TabIndex = 18;
+            this.ExportButton.UseVisualStyleBackColor = false;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
+            // 
             // button_whoisare
             // 
             this.button_whoisare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(93)))), ((int)(((byte)(129)))));
@@ -836,7 +851,7 @@ namespace StudentExamScoreSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.ButtonSignOut);
             this.panel1.Controls.Add(this.UserInfoButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.ExitButton);
@@ -846,20 +861,20 @@ namespace StudentExamScoreSystem
             this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // button2
+            // ButtonSignOut
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(949, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 31);
-            this.button2.TabIndex = 17;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ButtonSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
+            this.ButtonSignOut.FlatAppearance.BorderSize = 0;
+            this.ButtonSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSignOut.ForeColor = System.Drawing.Color.White;
+            this.ButtonSignOut.Image = ((System.Drawing.Image)(resources.GetObject("ButtonSignOut.Image")));
+            this.ButtonSignOut.Location = new System.Drawing.Point(949, 0);
+            this.ButtonSignOut.Name = "ButtonSignOut";
+            this.ButtonSignOut.Size = new System.Drawing.Size(61, 31);
+            this.ButtonSignOut.TabIndex = 17;
+            this.ButtonSignOut.UseVisualStyleBackColor = false;
+            this.ButtonSignOut.Click += new System.EventHandler(this.button2_Click);
             // 
             // UserInfoButton
             // 
@@ -904,21 +919,6 @@ namespace StudentExamScoreSystem
             this.ExitButton.TabIndex = 14;
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // ExportButton
-            // 
-            this.ExportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-            this.ExportButton.FlatAppearance.BorderSize = 0;
-            this.ExportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExportButton.ForeColor = System.Drawing.Color.White;
-            this.ExportButton.Image = ((System.Drawing.Image)(resources.GetObject("ExportButton.Image")));
-            this.ExportButton.Location = new System.Drawing.Point(399, 3);
-            this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(61, 37);
-            this.ExportButton.TabIndex = 18;
-            this.ExportButton.UseVisualStyleBackColor = false;
-            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // StudentExamScoreSys
             // 
@@ -1019,7 +1019,7 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button UserInfoButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ButtonSignOut;
         private System.Windows.Forms.Button ExportButton;
     }
 }

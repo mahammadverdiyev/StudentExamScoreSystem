@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ExportButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQHBB0gIQFa4AAAAONJREFU
+        SEvtlD0OgkAQRulsLA0xXMOO2ngCGxJD6RW8gIXX0JYj2Bo6Ey3VcAB7SpP1G8ZENuyPy7KdL3lhl2R4
+        QAKREOIB28zhkpdWtnDCy4YaZlEbPi/hEyBecPW5fJAA8Y3wXmKIAEGRLGSAqEMHhCqwgCM4/cExjKEW
+        VeAENw4WUIsqMCj/gBVd4AmPjtJMB12gaD5zB2iGR2WMARwPsLK49wnkcGcx7x1wgWZ4VMb2BCVvjZQ+
+        gRSuLaY+gQTOLCY+gStvjVx8AvQrVt1127hP4AxV79skzXSgwJ2XIRC3Nyey8wlQqkMIAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAjYAAACKCAYAAAC5IQASAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -403,7 +414,7 @@
         b3rP7A37K0oU+8x+yVu2W1EURVHqG/cV/x+lVJIXiTHcnQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonSignOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQFDBUAdqxpEwAAATJJREFU
@@ -413,17 +424,6 @@
         WEkvXAA1jg0wenFBnbzBmwagk7fCr184sro5zEVtMLS6OcwVbpF2joh/iyyI3oQapwaC8blt2sX7NCkA
         1hQbCOLsoH1bHO+gZTCnR0XNxv9P079vcMkrU5tlY6EfEnQ+9NLXV0LISz/b7mMrdR6SHnCJoZ8tY+dc
         4wDIXjTzSnGfIgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="ExportButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQHBB0gIQFa4AAAAONJREFU
-        SEvtlD0OgkAQRulsLA0xXMOO2ngCGxJD6RW8gIXX0JYj2Bo6Ey3VcAB7SpP1G8ZENuyPy7KdL3lhl2R4
-        QAKREOIB28zhkpdWtnDCy4YaZlEbPi/hEyBecPW5fJAA8Y3wXmKIAEGRLGSAqEMHhCqwgCM4/cExjKEW
-        VeAENw4WUIsqMCj/gBVd4AmPjtJMB12gaD5zB2iGR2WMARwPsLK49wnkcGcx7x1wgWZ4VMb2BCVvjZQ+
-        gRSuLaY+gQTOLCY+gStvjVx8AvQrVt1127hP4AxV79skzXSgwJ2XIRC3Nyey8wlQqkMIAAAAAElFTkSu
-        QmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

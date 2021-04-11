@@ -180,7 +180,7 @@ namespace StudentExamScoreSystem
                 this.Show();
                 ResetLabels();
                 ClearAllInputs();
-                ActiveControl = null;
+                ActiveControl = LoginPanel;
             };
         }
 
