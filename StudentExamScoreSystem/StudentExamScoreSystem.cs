@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using StudentExamScoreSystem.Filters;
 
 namespace StudentExamScoreSystem
 {
@@ -20,15 +21,16 @@ namespace StudentExamScoreSystem
 		public TextBox SurnameTextbox => surnameTextBox;
 		public ComboBox CourseComboBox => courseComboBox;
 
+		private HashSet<IFilterer> filterers;
+
 		public const int WM_NCLBUTTONDOWN = 0xA1;
 		public const int HT_CAPTION = 0x2;
 
-		[DllImportAttribute("user32.dll")]
+		[DllImport("user32.dll")]
 		public static extern int SendMessage(IntPtr hWnd,
 						 int Msg, int wParam, int lParam);
-		[DllImportAttribute("user32.dll")]
+		[DllImport("user32.dll")]
 		public static extern bool ReleaseCapture();
-
 
 		public StudentExamScoreSys()
         {
@@ -39,6 +41,7 @@ namespace StudentExamScoreSystem
 		{
 
 			students = new List<IStudent>();
+			filterers = new HashSet<IFilterer>();
 			StudentFileUtil.ReadStudentDataFromFile(students);
 
 			inputValidator = new InputValidator(this);
@@ -140,10 +143,7 @@ namespace StudentExamScoreSystem
 
 			bool reversed = reversedCheckBox.Checked;
 
-			if(sortStudentsComboBox.SelectedItem == null)
-            {
-				return;
-            }
+			if (sortStudentsComboBox.SelectedItem == null) return;
 
 			string selectedSortingTypeInString = (string) sortStudentsComboBox.SelectedItem;
 
@@ -193,164 +193,179 @@ namespace StudentExamScoreSystem
             consoleTextBox.AppendText(Environment.NewLine);
 		}
 
-		private bool HandleValueRange(int score, string op, int examResult)
-		{
-			bool valid = false;
-
-			if (op.Equals("="))
-			{
-				if (examResult == score)
-					valid = true;
-			}
-			else if (op.Equals("<"))
-			{
-				if (examResult < score)
-					valid = true;
-			}
-			else
-			{
-				if (examResult > score)
-					valid = true;
-			}
-
-			return valid;
-		}
 
 		private void FindStudentButton_Click(object sender, EventArgs e)
 		{
-			WriteDefaultTextToConsole();
+			consoleTextBox.Clear();
+			HandleNameFilter();
+			HandleSurnameFilter();
+			HandleSelectedCourseFilter();
+			HandleFirstExamFilter();
+			HandleSecondExamFilter();
+			HandleThirdExamFilter();
+			HandleFinalExamFilter();
+			HandleAverageScoreFilter();
 
-			string name = CapitalizeFirstLetter(findNameTextBox.Text);
-			string surname = CapitalizeFirstLetter(findSurnameTextBox.Text);
-			string course = "";
-			if (findCourseComboBox.SelectedItem != null)
-				course = findCourseComboBox.SelectedItem.ToString();
+			List<IStudent> studentListToDisplay = GetFilteredStudentList();
 
-			List<IStudent> studentsWeSearch = new List<IStudent>();
-
-			int sdf1 = -4818, sdf2 = -4818, sdf3 = -4818, final = -4818, average = -4818;
-
-			string op_sdf1 = null, op_sdf2 = null, op_sdf3 = null, op_final = null, op_average = null;
-
-			if (int.TryParse(txtbox_find_sdf1.Text, out int _sdf1))
-			{
-				sdf1 = _sdf1;
-				if (findSdf1ComboBox.SelectedItem != null)
-					op_sdf1 = findSdf1ComboBox.SelectedItem.ToString();
-			}
-			if (int.TryParse(txtbox_find_sdf2.Text, out int _sdf2))
-			{
-				sdf2 = _sdf2;
-				if (findSdf2ComboBox.SelectedItem != null)
-					op_sdf2 = findSdf2ComboBox.SelectedItem.ToString();
-			}
-			if (int.TryParse(txtbox_find_sdf3.Text, out int _sdf3))
-			{
-				sdf3 = _sdf3;
-				if (findSdf3ComboBox.SelectedItem != null)
-					op_sdf3 = findSdf3ComboBox.SelectedItem.ToString();
-			}
-			if (int.TryParse(txtbox_find_final.Text, out int _final))
-			{
-				final = _final;
-				if (findFinalComboBox.SelectedItem != null)
-					op_final = findFinalComboBox.SelectedItem.ToString();
-			}
-			if (int.TryParse(txtbox_find_average.Text, out int _average))
-			{
-				average = _average;
-				if (findAverageComboBox.SelectedItem != null)
-					op_average = findAverageComboBox.SelectedItem.ToString();
-			}
-
-			int emptyFieldCount = 0;
-
-			// count empty fields
-			if (name == null || name.Trim().Length == 0)
-				emptyFieldCount++;
-			if (surname == null || surname.Trim().Length == 0)
-				emptyFieldCount++;
-			if (course == null || course.Trim().Length == 0)
-				emptyFieldCount++;
-			if (op_sdf1 == null || sdf1 == -4818)
-				emptyFieldCount++;
-			if (op_sdf2 == null || sdf2 == -4818)
-				emptyFieldCount++;
-			if (op_sdf3 == null || sdf3 == -4818)
-				emptyFieldCount++;
-			if (op_final == null || final == -4818)
-				emptyFieldCount++;
-			if (op_average == null || average == -4818)
-				emptyFieldCount++;
-
-			foreach (var student in students)
-			{
-				if (name != null && name.Trim().Length != 0)
-				{
-					if (!student.GetName().StartsWith(name))
-						continue;
-				}
-				if (surname != null && surname.Trim().Length != 0)
-				{
-					if (!student.GetSurname().StartsWith(surname))
-						continue;
-				}
-				if (course != null && course.Trim().Length != 0)
-				{
-					if (!student.GetCourse().ToString().StartsWith(course))
-						continue;
-				}
-				if (op_sdf1 != null && sdf1 != -4818)
-				{
-					bool isValid = HandleValueRange(sdf1, op_sdf1, student.GetExamScores().Sdf1);
-
-					if (!isValid)
-						continue;
-				}
-				if (op_sdf2 != null && sdf2 != -4818)
-				{
-					bool isValid = HandleValueRange(sdf2, op_sdf2, student.GetExamScores().Sdf2);
-
-					if (!isValid)
-						continue;
-				}
-				if (op_sdf3 != null && sdf3 != -4818)
-				{
-					bool isValid = HandleValueRange(sdf3, op_sdf3, student.GetExamScores().Sdf3);
-
-					if (!isValid)
-						continue;
-				}
-				if (op_final != null && final != -4818)
-				{
-					bool isValid = HandleValueRange(final, op_final, student.GetExamScores().Final);
-
-					if (!isValid)
-						continue;
-				}
-				if (op_average != null && average != -4818)
-				{
-					bool isValid = HandleValueRange(average, op_average, student.GetExamScores().CalculateAverage());
-
-					if (!isValid)
-						continue;
-				}
-
-				if (emptyFieldCount != 8)
-				{
-					studentsWeSearch.Add(student);
-				}
-			}
-
-			PrintStudentList(studentsWeSearch);
+			PrintStudentList(studentListToDisplay);
 		}
 
-        private void button_whoisare_Click(object sender, EventArgs e)
-        {
+		private List<IStudent> GetFilteredStudentList()
+		{
+			List<IStudent> studentListToDisplay;
 
-        }
+			if (filterers.Count == 1)
+			{
+				IFilterer filterer = filterers.ElementAt(0);
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+				studentListToDisplay = filterer.Filter(students);
+			}
+			else
+			{
+				IFilterer filterer = new AdvancedFilterer(filterers.ToList());
+				studentListToDisplay = filterer.Filter(students);
+			}
+
+			return studentListToDisplay;
+		}
+
+		private void HandleAverageScoreFilter()
+		{
+			if (averageScoreNumeric.Value == 0)
+			{
+				IFilterer searchedAverageScoreFilterer = HashSetContainsItem(typeof(AverageScoreFilterer));
+
+				if (searchedAverageScoreFilterer != null)
+				{
+					filterers.Remove(searchedAverageScoreFilterer);
+				}
+			}
+			else
+				filterers.Add(new AverageScoreFilterer((int)averageScoreNumeric.Value));
+		}
+
+		private void HandleFinalExamFilter()
+		{
+			if (finalExamNumeric.Value == 0)
+			{
+				IFilterer searchedFinalExamFilterer = HashSetContainsItem(typeof(FinalExamFilterer));
+
+				if (searchedFinalExamFilterer != null)
+				{
+					filterers.Remove(searchedFinalExamFilterer);
+				}
+			}
+			else
+				filterers.Add(new FinalExamFilterer((int)finalExamNumeric.Value));
+		}
+
+		private void HandleThirdExamFilter()
+		{
+			if (thirdExamNumeric.Value == 0)
+			{
+				IFilterer searchedThirdExamFilterer = HashSetContainsItem(typeof(ThirdExamFilterer));
+
+				if (searchedThirdExamFilterer != null)
+				{
+					filterers.Remove(searchedThirdExamFilterer);
+				}
+			}
+			else
+				filterers.Add(new ThirdExamFilterer((int)thirdExamNumeric.Value));
+		}
+
+		private void HandleSecondExamFilter()
+		{
+			if (secondExamNumeric.Value == 0)
+			{
+				IFilterer searchedSecondExamFilterer = HashSetContainsItem(typeof(SecondExamFilterer));
+
+				if (searchedSecondExamFilterer != null)
+				{
+					filterers.Remove(searchedSecondExamFilterer);
+				}
+			}
+			else
+				filterers.Add(new SecondExamFilterer((int)secondExamNumeric.Value));
+		}
+
+		private void HandleFirstExamFilter()
+		{
+			if (firstExamNumeric.Value == 0)
+			{
+				IFilterer searchedFirstExamFilterer = HashSetContainsItem(typeof(FirstExamFilterer));
+
+				if (searchedFirstExamFilterer != null)
+				{
+					filterers.Remove(searchedFirstExamFilterer);
+				}
+			}
+			else
+				filterers.Add(new FirstExamFilterer((int)firstExamNumeric.Value));
+		}
+
+		private void HandleSelectedCourseFilter()
+		{
+			if (findCourseComboBox.SelectedItem == null)
+			{
+				IFilterer searchedSelectedCourseFilter = HashSetContainsItem(typeof(CourseFilterer));
+
+				if (searchedSelectedCourseFilter != null)
+				{
+					filterers.Remove(searchedSelectedCourseFilter);
+				}
+			}
+			else
+				filterers.Add(new CourseFilterer((int)findCourseComboBox.SelectedItem));
+		}
+
+		private void HandleSurnameFilter()
+		{
+			if (string.IsNullOrEmpty(findSurnameTextBox.Text))
+			{
+				IFilterer searchedSurnameFilterer = HashSetContainsItem(typeof(SurnameFilterer));
+
+				if (searchedSurnameFilterer != null)
+				{
+					filterers.Remove(searchedSurnameFilterer);
+				}
+			}
+			else
+				filterers.Add(new SurnameFilterer(findSurnameLabel.Text));
+		}
+
+		private void HandleNameFilter()
+		{
+			if (string.IsNullOrEmpty(findNameTextBox.Text))
+			{
+				IFilterer searchedNameFilter = HashSetContainsItem(typeof(NameFilterer));
+
+				if (searchedNameFilter != null)
+				{
+					filterers.Remove(searchedNameFilter);
+				}
+			}
+			else
+				filterers.Add(new NameFilterer(findNameTextBox.Text));
+		}
+
+		private IFilterer HashSetContainsItem(Type filterType)
+		{
+			if (filterers.Count == 0) return null;
+
+			foreach (IFilterer filterer in filterers)
+			{
+				if (filterer.GetType() == filterType)
+				{
+					return filterer;
+				}
+			}
+
+			return null;
+		}
+
+		private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
 			if (e.Button == MouseButtons.Left && e.Clicks == 1)
 			{
@@ -361,15 +376,13 @@ namespace StudentExamScoreSystem
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-			//pfc.Dispose();
 			Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-			this.WindowState = FormWindowState.Minimized;
+			WindowState = FormWindowState.Minimized;
 		}
-
 
         private void InitializeCurrentUserInfo()
         {
@@ -396,7 +409,7 @@ namespace StudentExamScoreSystem
 
             if (dialogResult == DialogResult.Yes)
             {
-				this.Close();
+				Close();
 			}
 
 		}
@@ -417,5 +430,5 @@ namespace StudentExamScoreSystem
 				StudentFileUtil.WriteStudentDataToFile(dialog.FileName,students);
             }
         }
-    }
+	}
 }

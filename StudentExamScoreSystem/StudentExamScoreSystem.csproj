@@ -55,6 +55,16 @@
     <Compile Include="Decryptor.cs" />
     <Compile Include="Encryptor.cs" />
     <Compile Include="ExamScore.cs" />
+    <Compile Include="Filters\AdvancedFilterer.cs" />
+    <Compile Include="Filters\AverageScoreFilterer.cs" />
+    <Compile Include="Filters\CourseFilterer.cs" />
+    <Compile Include="Filters\FinalExamFilterer.cs" />
+    <Compile Include="Filters\FirstExamFilterer.cs" />
+    <Compile Include="Filters\IFilterer.cs" />
+    <Compile Include="Filters\NameFilterer.cs" />
+    <Compile Include="Filters\SecondExamFilterer.cs" />
+    <Compile Include="Filters\SurnameFilterer.cs" />
+    <Compile Include="Filters\ThirdExamFilterer.cs" />
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,7 +8,6 @@ namespace StudentExamScoreSystem
         // don't modify
         private static readonly string STUDENT_DATA_PATH = "student_data.txt";
 
-
         public static void ReadStudentDataFromFile(List<IStudent> listStudent)
         {
             using (StreamReader reader = new StreamReader(STUDENT_DATA_PATH))

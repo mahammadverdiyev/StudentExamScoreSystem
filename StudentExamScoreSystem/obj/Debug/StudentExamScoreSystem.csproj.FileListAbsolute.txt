@@ -21,3 +21,16 @@ C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj
 C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.csprojAssemblyReference.cache
 C:\Users\Muhammad\source\repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.CurrentUserInfo.resources
 C:\Users\Muhammad\Source\Repos\StudentExamScoreSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.LoadingScreen.resources
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\bin\Debug\StudentExamScoreSystem.exe.config
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\bin\Debug\StudentExamScoreSystem.exe
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\bin\Debug\StudentExamScoreSystem.pdb
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.csprojAssemblyReference.cache
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.CurrentUserInfo.resources
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.LoadingScreen.resources
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.LoginScreen.resources
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.StudentExamScoreSys.resources
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.Properties.Resources.resources
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.csproj.GenerateResource.cache
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.csproj.CoreCompileInputs.cache
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.exe
+C:\Users\elnur\OneDrive\Desktop\StudentInfoSystem\StudentExamScoreSystem\obj\Debug\StudentExamScoreSystem.pdb
