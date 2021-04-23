@@ -37,11 +37,11 @@ namespace StudentExamScoreSystem
 			this.sortStudentsComboBox = new System.Windows.Forms.ComboBox();
 			this.reversedCheckBox = new System.Windows.Forms.CheckBox();
 			this.findStudentPanel = new System.Windows.Forms.Panel();
-			this.averageScoreNumeric = new System.Windows.Forms.NumericUpDown();
-			this.finalExamNumeric = new System.Windows.Forms.NumericUpDown();
-			this.thirdExamNumeric = new System.Windows.Forms.NumericUpDown();
-			this.secondExamNumeric = new System.Windows.Forms.NumericUpDown();
-			this.firstExamNumeric = new System.Windows.Forms.NumericUpDown();
+			this.findAverageScoreNumeric = new System.Windows.Forms.NumericUpDown();
+			this.findFinalExamNumeric = new System.Windows.Forms.NumericUpDown();
+			this.findThirdExamNumeric = new System.Windows.Forms.NumericUpDown();
+			this.findSecondExamNumeric = new System.Windows.Forms.NumericUpDown();
+			this.findFirstExamNumeric = new System.Windows.Forms.NumericUpDown();
 			this.findAverageComboBox = new System.Windows.Forms.ComboBox();
 			this.label_find_average = new System.Windows.Forms.Label();
 			this.findFinalComboBox = new System.Windows.Forms.ComboBox();
@@ -97,11 +97,11 @@ namespace StudentExamScoreSystem
 			this.testLabel = new System.Windows.Forms.Label();
 			this.panel_console.SuspendLayout();
 			this.findStudentPanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.averageScoreNumeric)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.finalExamNumeric)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.thirdExamNumeric)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.secondExamNumeric)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.firstExamNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.findAverageScoreNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.findFinalExamNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.findThirdExamNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.findSecondExamNumeric)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.findFirstExamNumeric)).BeginInit();
 			this.sortPanel.SuspendLayout();
 			this.leftPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.FinalNumericUpDown)).BeginInit();
@@ -197,11 +197,11 @@ namespace StudentExamScoreSystem
 			// findStudentPanel
 			// 
 			this.findStudentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(75)))), ((int)(((byte)(96)))));
-			this.findStudentPanel.Controls.Add(this.averageScoreNumeric);
-			this.findStudentPanel.Controls.Add(this.finalExamNumeric);
-			this.findStudentPanel.Controls.Add(this.thirdExamNumeric);
-			this.findStudentPanel.Controls.Add(this.secondExamNumeric);
-			this.findStudentPanel.Controls.Add(this.firstExamNumeric);
+			this.findStudentPanel.Controls.Add(this.findAverageScoreNumeric);
+			this.findStudentPanel.Controls.Add(this.findFinalExamNumeric);
+			this.findStudentPanel.Controls.Add(this.findThirdExamNumeric);
+			this.findStudentPanel.Controls.Add(this.findSecondExamNumeric);
+			this.findStudentPanel.Controls.Add(this.findFirstExamNumeric);
 			this.findStudentPanel.Controls.Add(this.findAverageComboBox);
 			this.findStudentPanel.Controls.Add(this.label_find_average);
 			this.findStudentPanel.Controls.Add(this.findFinalComboBox);
@@ -227,43 +227,43 @@ namespace StudentExamScoreSystem
 			// 
 			// averageScoreNumeric
 			// 
-			this.averageScoreNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.averageScoreNumeric.Location = new System.Drawing.Point(340, 181);
-			this.averageScoreNumeric.Name = "averageScoreNumeric";
-			this.averageScoreNumeric.Size = new System.Drawing.Size(31, 22);
-			this.averageScoreNumeric.TabIndex = 52;
+			this.findAverageScoreNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findAverageScoreNumeric.Location = new System.Drawing.Point(340, 181);
+			this.findAverageScoreNumeric.Name = "averageScoreNumeric";
+			this.findAverageScoreNumeric.Size = new System.Drawing.Size(31, 22);
+			this.findAverageScoreNumeric.TabIndex = 52;
 			// 
 			// finalExamNumeric
 			// 
-			this.finalExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.finalExamNumeric.Location = new System.Drawing.Point(340, 153);
-			this.finalExamNumeric.Name = "finalExamNumeric";
-			this.finalExamNumeric.Size = new System.Drawing.Size(31, 22);
-			this.finalExamNumeric.TabIndex = 51;
+			this.findFinalExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findFinalExamNumeric.Location = new System.Drawing.Point(340, 153);
+			this.findFinalExamNumeric.Name = "finalExamNumeric";
+			this.findFinalExamNumeric.Size = new System.Drawing.Size(31, 22);
+			this.findFinalExamNumeric.TabIndex = 51;
 			// 
 			// thirdExamNumeric
 			// 
-			this.thirdExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.thirdExamNumeric.Location = new System.Drawing.Point(134, 206);
-			this.thirdExamNumeric.Name = "thirdExamNumeric";
-			this.thirdExamNumeric.Size = new System.Drawing.Size(31, 22);
-			this.thirdExamNumeric.TabIndex = 50;
+			this.findThirdExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findThirdExamNumeric.Location = new System.Drawing.Point(134, 206);
+			this.findThirdExamNumeric.Name = "thirdExamNumeric";
+			this.findThirdExamNumeric.Size = new System.Drawing.Size(31, 22);
+			this.findThirdExamNumeric.TabIndex = 50;
 			// 
 			// secondExamNumeric
 			// 
-			this.secondExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.secondExamNumeric.Location = new System.Drawing.Point(134, 179);
-			this.secondExamNumeric.Name = "secondExamNumeric";
-			this.secondExamNumeric.Size = new System.Drawing.Size(31, 22);
-			this.secondExamNumeric.TabIndex = 49;
+			this.findSecondExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findSecondExamNumeric.Location = new System.Drawing.Point(134, 179);
+			this.findSecondExamNumeric.Name = "secondExamNumeric";
+			this.findSecondExamNumeric.Size = new System.Drawing.Size(31, 22);
+			this.findSecondExamNumeric.TabIndex = 49;
 			// 
 			// firstExamNumeric
 			// 
-			this.firstExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.firstExamNumeric.Location = new System.Drawing.Point(134, 152);
-			this.firstExamNumeric.Name = "firstExamNumeric";
-			this.firstExamNumeric.Size = new System.Drawing.Size(31, 22);
-			this.firstExamNumeric.TabIndex = 48;
+			this.findFirstExamNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.findFirstExamNumeric.Location = new System.Drawing.Point(134, 152);
+			this.findFirstExamNumeric.Name = "firstExamNumeric";
+			this.findFirstExamNumeric.Size = new System.Drawing.Size(31, 22);
+			this.findFirstExamNumeric.TabIndex = 48;
 			// 
 			// findAverageComboBox
 			// 
@@ -947,11 +947,11 @@ namespace StudentExamScoreSystem
 			this.panel_console.PerformLayout();
 			this.findStudentPanel.ResumeLayout(false);
 			this.findStudentPanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.averageScoreNumeric)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.finalExamNumeric)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.thirdExamNumeric)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.secondExamNumeric)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.firstExamNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.findAverageScoreNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.findFinalExamNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.findThirdExamNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.findSecondExamNumeric)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.findFirstExamNumeric)).EndInit();
 			this.sortPanel.ResumeLayout(false);
 			this.sortPanel.PerformLayout();
 			this.leftPanel.ResumeLayout(false);
@@ -1026,11 +1026,11 @@ namespace StudentExamScoreSystem
         private System.Windows.Forms.Button UserInfoButton;
         private System.Windows.Forms.Button ButtonSignOut;
         private System.Windows.Forms.Button ExportButton;
-		private System.Windows.Forms.NumericUpDown thirdExamNumeric;
-		private System.Windows.Forms.NumericUpDown secondExamNumeric;
-		private System.Windows.Forms.NumericUpDown firstExamNumeric;
-		private System.Windows.Forms.NumericUpDown averageScoreNumeric;
-		private System.Windows.Forms.NumericUpDown finalExamNumeric;
+		private System.Windows.Forms.NumericUpDown findThirdExamNumeric;
+		private System.Windows.Forms.NumericUpDown findSecondExamNumeric;
+		private System.Windows.Forms.NumericUpDown findFirstExamNumeric;
+		private System.Windows.Forms.NumericUpDown findAverageScoreNumeric;
+		private System.Windows.Forms.NumericUpDown findFinalExamNumeric;
 		private System.Windows.Forms.Label testLabel;
 	}
 }

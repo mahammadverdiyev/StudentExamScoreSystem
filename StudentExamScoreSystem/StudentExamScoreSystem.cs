@@ -20,8 +20,14 @@ namespace StudentExamScoreSystem
 		public TextBox NameTextbox => nameTextBox;
 		public TextBox SurnameTextbox => surnameTextBox;
 		public ComboBox CourseComboBox => courseComboBox;
-
-		private HashSet<IFilterer> filterers;
+		public TextBox FindNameTextBox => findNameTextBox;
+		public TextBox FindSurnameTextBox => findSurnameTextBox;
+		public ComboBox FindCourseComboBox => findCourseComboBox;
+		public NumericUpDown FindFirstExamNumeric => findFirstExamNumeric;
+		public NumericUpDown FindSecondExamNumeric => findSecondExamNumeric;
+		public NumericUpDown FindThirdExamNumeric => findThirdExamNumeric;
+		public NumericUpDown FindFinalExamNumeric => findFinalExamNumeric;
+		public NumericUpDown FindAverageScoreNumeric => findAverageScoreNumeric;
 
 		public const int WM_NCLBUTTONDOWN = 0xA1;
 		public const int HT_CAPTION = 0x2;
@@ -41,12 +47,13 @@ namespace StudentExamScoreSystem
 		{
 
 			students = new List<IStudent>();
-			filterers = new HashSet<IFilterer>();
 			StudentFileUtil.ReadStudentDataFromFile(students);
 
 			inputValidator = new InputValidator(this);
             
             ResetLabels();
+
+			FilterHandler.System = this;
 		}
 
 		private void ResetLabels()
@@ -113,6 +120,8 @@ namespace StudentExamScoreSystem
 
 		private void PrintStudentList(List<IStudent> studentList)
 		{
+			WriteDefaultTextToConsole();
+
 			foreach (var student in studentList)
 			{
 				PrintSingleStudent(student);
@@ -193,177 +202,18 @@ namespace StudentExamScoreSystem
             consoleTextBox.AppendText(Environment.NewLine);
 		}
 
-
 		private void FindStudentButton_Click(object sender, EventArgs e)
 		{
 			consoleTextBox.Clear();
-			HandleNameFilter();
-			HandleSurnameFilter();
-			HandleSelectedCourseFilter();
-			HandleFirstExamFilter();
-			HandleSecondExamFilter();
-			HandleThirdExamFilter();
-			HandleFinalExamFilter();
-			HandleAverageScoreFilter();
 
-			List<IStudent> studentListToDisplay = GetFilteredStudentList();
+			FilterHandler.ToggleAllFilters();
+
+			List<IStudent> studentListToDisplay = FilterHandler.GetFilteredStudentList();
 
 			PrintStudentList(studentListToDisplay);
 		}
 
-		private List<IStudent> GetFilteredStudentList()
-		{
-			List<IStudent> studentListToDisplay;
-
-			if (filterers.Count == 1)
-			{
-				IFilterer filterer = filterers.ElementAt(0);
-
-				studentListToDisplay = filterer.Filter(students);
-			}
-			else
-			{
-				IFilterer filterer = new AdvancedFilterer(filterers.ToList());
-				studentListToDisplay = filterer.Filter(students);
-			}
-
-			return studentListToDisplay;
-		}
-
-		private void HandleAverageScoreFilter()
-		{
-			if (averageScoreNumeric.Value == 0)
-			{
-				IFilterer searchedAverageScoreFilterer = HashSetContainsItem(typeof(AverageScoreFilterer));
-
-				if (searchedAverageScoreFilterer != null)
-				{
-					filterers.Remove(searchedAverageScoreFilterer);
-				}
-			}
-			else
-				filterers.Add(new AverageScoreFilterer((int)averageScoreNumeric.Value));
-		}
-
-		private void HandleFinalExamFilter()
-		{
-			if (finalExamNumeric.Value == 0)
-			{
-				IFilterer searchedFinalExamFilterer = HashSetContainsItem(typeof(FinalExamFilterer));
-
-				if (searchedFinalExamFilterer != null)
-				{
-					filterers.Remove(searchedFinalExamFilterer);
-				}
-			}
-			else
-				filterers.Add(new FinalExamFilterer((int)finalExamNumeric.Value));
-		}
-
-		private void HandleThirdExamFilter()
-		{
-			if (thirdExamNumeric.Value == 0)
-			{
-				IFilterer searchedThirdExamFilterer = HashSetContainsItem(typeof(ThirdExamFilterer));
-
-				if (searchedThirdExamFilterer != null)
-				{
-					filterers.Remove(searchedThirdExamFilterer);
-				}
-			}
-			else
-				filterers.Add(new ThirdExamFilterer((int)thirdExamNumeric.Value));
-		}
-
-		private void HandleSecondExamFilter()
-		{
-			if (secondExamNumeric.Value == 0)
-			{
-				IFilterer searchedSecondExamFilterer = HashSetContainsItem(typeof(SecondExamFilterer));
-
-				if (searchedSecondExamFilterer != null)
-				{
-					filterers.Remove(searchedSecondExamFilterer);
-				}
-			}
-			else
-				filterers.Add(new SecondExamFilterer((int)secondExamNumeric.Value));
-		}
-
-		private void HandleFirstExamFilter()
-		{
-			if (firstExamNumeric.Value == 0)
-			{
-				IFilterer searchedFirstExamFilterer = HashSetContainsItem(typeof(FirstExamFilterer));
-
-				if (searchedFirstExamFilterer != null)
-				{
-					filterers.Remove(searchedFirstExamFilterer);
-				}
-			}
-			else
-				filterers.Add(new FirstExamFilterer((int)firstExamNumeric.Value));
-		}
-
-		private void HandleSelectedCourseFilter()
-		{
-			if (findCourseComboBox.SelectedItem == null)
-			{
-				IFilterer searchedSelectedCourseFilter = HashSetContainsItem(typeof(CourseFilterer));
-
-				if (searchedSelectedCourseFilter != null)
-				{
-					filterers.Remove(searchedSelectedCourseFilter);
-				}
-			}
-			else
-				filterers.Add(new CourseFilterer((int)findCourseComboBox.SelectedItem));
-		}
-
-		private void HandleSurnameFilter()
-		{
-			if (string.IsNullOrEmpty(findSurnameTextBox.Text))
-			{
-				IFilterer searchedSurnameFilterer = HashSetContainsItem(typeof(SurnameFilterer));
-
-				if (searchedSurnameFilterer != null)
-				{
-					filterers.Remove(searchedSurnameFilterer);
-				}
-			}
-			else
-				filterers.Add(new SurnameFilterer(findSurnameLabel.Text));
-		}
-
-		private void HandleNameFilter()
-		{
-			if (string.IsNullOrEmpty(findNameTextBox.Text))
-			{
-				IFilterer searchedNameFilter = HashSetContainsItem(typeof(NameFilterer));
-
-				if (searchedNameFilter != null)
-				{
-					filterers.Remove(searchedNameFilter);
-				}
-			}
-			else
-				filterers.Add(new NameFilterer(findNameTextBox.Text));
-		}
-
-		private IFilterer HashSetContainsItem(Type filterType)
-		{
-			if (filterers.Count == 0) return null;
-
-			foreach (IFilterer filterer in filterers)
-			{
-				if (filterer.GetType() == filterType)
-				{
-					return filterer;
-				}
-			}
-
-			return null;
-		}
+		public List<IStudent> GetStudentList() => students;
 
 		private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
