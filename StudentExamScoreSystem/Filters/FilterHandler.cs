@@ -35,7 +35,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(NameFilterer));
 				filterers.Add(new NameFilterer(system.FindNameTextBox.Text));
+			}
 		}
 
 		public static void ToggleSurnameFilter()
@@ -50,7 +53,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(SurnameFilterer));
 				filterers.Add(new SurnameFilterer(system.FindSurnameTextBox.Text));
+			}
 		}
 
 		public static void ToggleFirstExamFilter()
@@ -65,7 +71,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(FirstExamFilterer));
 				filterers.Add(new FirstExamFilterer((int)system.FindFirstExamNumeric.Value));
+			}
 		}
 
 		public static void ToggleSecondExamFilter()
@@ -80,7 +89,11 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(SecondExamFilterer));
 				filterers.Add(new SecondExamFilterer((int)system.FindSecondExamNumeric.Value));
+			}
+
 		}
 
 		public static void ToggleThirdExamFilter()
@@ -95,7 +108,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(ThirdExamFilterer));
 				filterers.Add(new ThirdExamFilterer((int)system.FindThirdExamNumeric.Value));
+			}
 		}
 
 		public static void ToggleFinalExamFilter()
@@ -110,7 +126,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(FinalExamFilterer));
 				filterers.Add(new FinalExamFilterer((int)system.FindFinalExamNumeric.Value));
+			}
 		}
 
 		public static void ToggleSelectedCourseFilter()
@@ -125,7 +144,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
-				filterers.Add(new CourseFilterer((int)system.FindCourseComboBox.SelectedItem));
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(CourseFilterer));
+				filterers.Add(new CourseFilterer(Convert.ToInt32(system.FindCourseComboBox.SelectedItem)));
+			}
 		}
 
 		public static void ToggleAverageScoreFilter()
@@ -140,7 +162,10 @@ namespace StudentExamScoreSystem.Filters
 				}
 			}
 			else
+            {
+				filterers.RemoveWhere(filterer => filterer.GetType() == typeof(AverageScoreFilterer));
 				filterers.Add(new AverageScoreFilterer((int)system.FindAverageScoreNumeric.Value));
+			}
 		}
 
 		public static IFilterer HashSetContainsItem(Type filterType)
@@ -161,9 +186,10 @@ namespace StudentExamScoreSystem.Filters
 		public static List<IStudent> GetFilteredStudentList()
 		{
 			List<IStudent> studentListToDisplay;
-
+            Console.WriteLine(filterers.Count);
 			if (filterers.Count == 1)
 			{
+                Console.WriteLine("burdayam");
 				IFilterer filterer = filterers.ElementAt(0);
 
 				studentListToDisplay = filterer.Filter(system.GetStudentList());

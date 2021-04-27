@@ -15,7 +15,7 @@ namespace StudentExamScoreSystem.Filters
 
 			foreach (IStudent student in students)
 			{
-				if (student.GetName() == filterName)
+				if (student.GetName().ToLower().StartsWith(filterName.ToLower()))
 				{
 					filteredList.Add(student);
 				}
@@ -23,5 +23,19 @@ namespace StudentExamScoreSystem.Filters
 
 			return filteredList;
 		}
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+			return base.GetType().GetHashCode();
+        }
 	}
 }

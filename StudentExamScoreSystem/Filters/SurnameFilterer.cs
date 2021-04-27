@@ -16,13 +16,27 @@ namespace StudentExamScoreSystem.Filters
 
 			foreach (IStudent student in students)
 			{
-				if (student.GetSurname() == filterSurname)
+				if (student.GetSurname().ToLower().StartsWith(filterSurname.ToLower()))
 				{
 					filteredList.Add(student);
 				}
 			}
 
 			return filteredList;
+		}
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+			return true;
+        }
+
+        public override int GetHashCode()
+        {
+			return base.GetType().GetHashCode();
 		}
 	}
 }
