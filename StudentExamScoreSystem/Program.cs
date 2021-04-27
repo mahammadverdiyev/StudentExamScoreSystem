@@ -12,7 +12,7 @@ namespace StudentExamScoreSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new StudentExamScoreSys());
+            Application.Run(new LoginScreen());
         }
 
         
